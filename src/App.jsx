@@ -1,12 +1,17 @@
+import About from "./About/About.jsx"
+import DefaultHeader from "./Default Header/DefaultHeader.jsx"
 import Footer from "./Footer/Footer.jsx"
-import Header from "./Header/Header.jsx"
-import Home from "./Home/Home.jsx"
+// import HomeHeader from "./Home Header/HomeHeader.jsx"
+// import Home from "./Home/Home.jsx"
+
 function App() {
   return (
     <>
-      <Header />  
+      {/* <HomeHeader />   */}
+      <DefaultHeader />
+      {/* <Home /> */}
+      <About />
 
-      <Home />
 
       <Footer />
     </>

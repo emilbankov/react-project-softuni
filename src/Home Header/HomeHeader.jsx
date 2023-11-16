@@ -1,6 +1,6 @@
-import styles from "./Header.module.css"
+import styles from "./HomeHeader.module.css"
 
-export default function Header() {
+export default function HomeHeader() {
     return (
         <div className="header">
             <nav className="navbar navbar-default">

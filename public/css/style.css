@@ -706,7 +706,7 @@ p.agileinfo {
 
 /*-- sub-banner --*/
 .sub-banner {
-	background: url(../images/banner3.jpg) no-repeat 0px 0px;
+	background-color: #73A9C2;
 	min-height: 87px;
 	background-size: cover;
 }
@@ -719,7 +719,7 @@ p.agileinfo {
 }
 
 .about-grid-left-agileits-w3layouts ul li {
-	display: inline-block;
+	display: block;
 	margin-bottom: 2em;
 	font-size: 14px;
 	text-transform: capitalize;
