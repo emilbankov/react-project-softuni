@@ -9,7 +9,7 @@ function App() {
             <div className="navbar-header">
               <a href="index.html">
                 <h1>
-                  Infinite <img className={styles.img} src="images/logo.png" alt=" " /> Pixels
+                  Infinite <img className={styles["img-logo-white"]} src="images/logo.png" alt=" " /> Pixels
                 </h1>
               </a>
             </div>
@@ -163,15 +163,13 @@ function App() {
       <div className="footer">
         <div className="container">
           <div className="col-md-3 footer-left-w3">
-            <h4>Contact</h4>
+            <h4 className={styles["left-footer"]}>Contact</h4>
             <ul>
               <li>
                 <span className="glyphicon glyphicon-envelope" aria-hidden="true" />
               </li>
               <li>
-                <a href="mailto:example@mail.com">
-                  <h6>ex@mail.com</h6>
-                </a>
+                <h6>emilbankov17d@mail.com</h6>
               </li>
             </ul>
             <ul>
@@ -179,7 +177,7 @@ function App() {
                 <span className="glyphicon glyphicon-earphone" aria-hidden="true" />
               </li>
               <li>
-                <h6>+18045678834</h6>
+                <h6>+359 899 507 113</h6>
               </li>
             </ul>
             <ul>
@@ -190,23 +188,13 @@ function App() {
                 />
               </li>
               <li>
-                <h6>4th Avenue,London</h6>
+                <h6>Plovdiv, Bulgaria</h6>
               </li>
             </ul>
-            <ul>
-              <li>
-                <span
-                  className="glyphicon glyphicon-phone-alt"
-                  aria-hidden="true"
-                />
-              </li>
-              <li>
-                <h6>(0033)6544 5453 644</h6>
-              </li>
-            </ul>
+
           </div>
           <div className="col-md-5 footer-middle-w3">
-            <h4>Latest Games</h4>
+            <h4 className={styles["middle-footer"]}>Latest Games</h4>
             <div className="col-md-3 img-w3-agile">
               <a href="single.html">
                 <img src="images/ng1.jpg" alt=" " />
@@ -227,47 +215,22 @@ function App() {
                 <img src="images/ng4.jpg" alt=" " />
               </a>
             </div>
-            <div className="col-md-3 img-w3-agile footer-middle-wthree">
-              <a href="single.html">
-                <img src="images/ng5.jpg" alt=" " />
-              </a>
-            </div>
-            <div className="col-md-3 img-w3-agile footer-middle-wthree">
-              <a href="single.html">
-                <img src="images/ng6.jpg" alt=" " />
-              </a>
-            </div>
-            <div className="col-md-3 img-w3-agile footer-middle-wthree">
-              <a href="single.html">
-                <img src="images/ng7.jpg" alt=" " />
-              </a>
-            </div>
-            <div className="col-md-3 img-w3-agile footer-middle-wthree">
-              <a href="single.html">
-                <img src="images/ng8.jpg" alt=" " />
-              </a>
-            </div>
             <div className="clearfix" />
           </div>
           <div className="col-md-4 footer-right-w3">
             <a href="index.html">
-              <h4>
-                Kids <img src="images/f1.png" alt=" " /> Game
+              <h4 className={styles["right-footer"]}>
+                Infinite <img className={styles["img-logo-black"]} src="images/logo-black.png" alt=" " /> Pixels
               </h4>
             </a>
-            <p>
-              Donec lobortis diam eu auctor porta. Phasellus in elementum tortor,
-              sit amet imperdiet urna pellentesque non risus porta.
-            </p>
             <p className="agileinfo">
-              Suspendisse convallis malesuada libero, non rutrum arcu pellentesque
-              lacinia.
+            Infinite Pixels: Where Gaming Unleashes Artistry! Your portal to endless entertainment. Immerse in a universe where pixels tell stories, and games are canvases of excitement, elevating your gaming experience.
             </p>
           </div>
           <div className="clearfix" />
           <div className="copyright">
             <p>
-              © 2020 Kids Video Game. All Rights Reserved | Design by{" "}
+              © 2023 Infinite Pixels. All Rights Reserved | Design by{" "}
               <a href="http://w3layouts.com/" target="_blank">
                 {" "}
                 W3layouts{" "}

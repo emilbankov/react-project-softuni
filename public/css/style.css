@@ -639,15 +639,13 @@ a.learn:hover {
 }
 
 .footer h4 {
-	text-align: left;
 	color: #000;
 	font-size: 27px;
-	margin-bottom: 30px;
 }
 
 .footer-left-w3 ul li {
 	display: inline-block;
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 
 .footer-left-w3 .glyphicon {
@@ -670,7 +668,7 @@ a.learn:hover {
 }
 
 .footer-right-w3 h4 {
-	color: #E91E63;
+	color: black;
 }
 
 .footer-right-w3 img {
@@ -684,7 +682,8 @@ a.learn:hover {
 }
 
 p.agileinfo {
-	margin-top: 30px;
+	margin-top: 16px;
+	text-align: right;
 }
 
 .copyright p {

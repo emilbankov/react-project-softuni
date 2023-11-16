@@ -1,3 +1,23 @@
-.img {
+.img-logo-white {
     height: 41px;
+}
+
+.img-logo-black {
+    height: 28px;
+}
+
+.left-footer {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.middle-footer {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.right-footer {
+    text-align: right;
+    height: 28px;
+    margin-bottom: 16px;
 }
