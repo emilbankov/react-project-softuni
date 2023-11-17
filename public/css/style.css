@@ -3536,11 +3536,13 @@ a.blog-read:hover {
 	margin: 0;
 }
 
-/* Login CSS */
-.login-page {
+/* Forms CSS */
+.login-page,
+.register-page,
+.add-game-page,
+.edit-game-page {
 	background: url('../images/login-register-background.png');
 	background-size: 100% 100%;
-	/* Ensure the background covers the entire container */
 	width: 1240px;
 	height: 601px;
 	margin-top: 33px;
@@ -3552,7 +3554,10 @@ a.blog-read:hover {
 	border-radius: 20px;
 }
 
-.login-container {
+.login-container,
+.register-container,
+.add-game-container,
+.edit-game-container {
 	max-width: 600px;
 	margin: 50px auto;
 	padding: 20px 60px;
@@ -3564,53 +3569,27 @@ a.blog-read:hover {
 	color: white;
 }
 
-.login-form {
+.login-form,
+.register-form,
+.add-game-form,
+.edit-game-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-/* Register */
-.register-page {
-	background: url('../images/login-register-background.png');
-	background-size: 100% 100%;
-	/* Ensure the background covers the entire container */
-	width: 1240px;
-	height: 601px;
-	margin-top: 33px;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 20px;
+.add-game-page,
+.edit-game-page {
+	height: 800px;
 }
 
-.register-container {
-	max-width: 600px;
-	margin: 50px auto;
-	padding: 20px 60px;
-	background: rgba(0, 0, 0, 0.5);
-	border: 1px solid white;
-	border-radius: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	text-align: center;
-	color: white;
-}
-
-.register-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-/* Login and Register */
 label {
 	margin-top: 10px;
 }
 
-input {
-	width: 220px;
+input,
+textarea {
+	width: 500px;
 	padding: 10px 10px;
 	margin-top: 5px;
 	box-sizing: border-box;
@@ -3618,6 +3597,10 @@ input {
 	border-radius: 20px;
 	font-family: 'open Sans', sans-serif;
 	color: black;
+}
+
+textarea#description {
+	height: 150px;
 }
 
 button {
