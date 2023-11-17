@@ -3,7 +3,7 @@ export default function Card() {
         <div className="card-container">
             <div className="card-image-container">
                 <img
-                    src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0402/AcjaXqwZzggGiKLFdEfHMp0H.png"
+                    src="https://www.albagame.al/cdn/shop/files/135179.png?v=1686908142"
                     alt="Card"
                     className="card-image"
                 />
