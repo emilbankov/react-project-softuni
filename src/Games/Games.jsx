@@ -8,41 +8,41 @@ export default function Games() {
                         <div className="gallery-grid">
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog">
-                                <img src="../images/g1.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g1.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog2">
-                                <img src="../images/g2.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g2.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                         </div>
                         <div className="gallery-grid">
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog3">
-                                <img src="../images/g3.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g3.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog4">
-                                <img src="../images/g5.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g5.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                         </div>
                         <div className="gallery-grid">
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog5">
-                                <img src="../images/g6.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g6.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog6">
-                                <img src="../images/g7.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g7.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                         </div>
                         <div className="gallery-grid">
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog7">
-                                <img src="../images/g4.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g4.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                             <a className="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                                 href="#small-dialog8">
-                                <img src="../images/g8.jpg" alt=" " className="img-responsive zoom-img" />
+                                <img src="/images/g8.jpg" alt=" " className="img-responsive zoom-img" />
                             </a>
                         </div>
                         <div className="clearfix"> </div>
@@ -53,7 +53,7 @@ export default function Games() {
                 <div id="small-dialog" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g1.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g1.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-1</h4>
@@ -84,7 +84,7 @@ export default function Games() {
                 <div id="small-dialog2" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g2big.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g2big.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-2</h4>
@@ -115,7 +115,7 @@ export default function Games() {
                 <div id="small-dialog3" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g3big.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g3big.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-3</h4>
@@ -146,7 +146,7 @@ export default function Games() {
                 <div id="small-dialog4" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g5.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g5.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-4</h4>
@@ -177,7 +177,7 @@ export default function Games() {
                 <div id="small-dialog5" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g6.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g6.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-5</h4>
@@ -208,7 +208,7 @@ export default function Games() {
                 <div id="small-dialog6" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g7big.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g7big.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-6</h4>
@@ -239,7 +239,7 @@ export default function Games() {
                 <div id="small-dialog7" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g4big.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g4big.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-7</h4>
@@ -270,7 +270,7 @@ export default function Games() {
                 <div id="small-dialog8" className="mfp-hide book-form">
                     <div className="pop-up-content-agileits-w3layouts">
                         <div className="col-md-6 w3ls-left">
-                            <img src="../images/g8.jpg" alt=" " className="img-responsive zoom-img" />
+                            <img src="/images/g8.jpg" alt=" " className="img-responsive zoom-img" />
                         </div>
                         <div className="col-md-6 w3ls-right">
                             <h4>Game-8</h4>

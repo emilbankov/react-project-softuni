@@ -7,8 +7,8 @@ export default function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Add your login logic here
-        console.log('Logging in with:', email, password);
+        // TODO
+       
     };
 
     return (

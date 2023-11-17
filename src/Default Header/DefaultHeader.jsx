@@ -16,7 +16,7 @@ export default function DefaultHeader() {
                         </button>
                         <a href="index.html">
                             <h1>
-                                Infinite <img className={styles["img-logo-white"]} src="../images/logo.png" alt=" " /> Pixels
+                                Infinite <img className={styles["img-logo-white"]} src="/images/logo.png" alt=" " /> Pixels
                             </h1>
                         </a>
                     </div>

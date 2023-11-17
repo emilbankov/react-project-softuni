@@ -39,22 +39,22 @@ export default function Footer() {
                     <h4 className={styles["middle-footer"]}>Latest Games</h4>
                     <div className="col-md-3 img-w3-agile">
                         <a href="single.html">
-                            <img src="../images/ng1.jpg" alt=" " />
+                            <img src="/images/ng1.jpg" alt=" " />
                         </a>
                     </div>
                     <div className="col-md-3 img-w3-agile">
                         <a href="single.html">
-                            <img src="../images/ng2.jpg" alt=" " />
+                            <img src="/images/ng2.jpg" alt=" " />
                         </a>
                     </div>
                     <div className="col-md-3 img-w3-agile">
                         <a href="single.html">
-                            <img src="../images/ng3.jpg" alt=" " />
+                            <img src="/images/ng3.jpg" alt=" " />
                         </a>
                     </div>
                     <div className="col-md-3 img-w3-agile">
                         <a href="single.html">
-                            <img src="../images/ng4.jpg" alt=" " />
+                            <img src="/images/ng4.jpg" alt=" " />
                         </a>
                     </div>
                     <div className="clearfix" />
@@ -62,7 +62,7 @@ export default function Footer() {
                 <div className="col-md-4 footer-right-w3">
                     <a href="index.html">
                         <h4 className={styles["right-footer"]}>
-                            Infinite <img className={styles["img-logo-black"]} src="../images/logo-black.png" alt=" " /> Pixels
+                            Infinite <img className={styles["img-logo-black"]} src="/images/logo-black.png" alt=" " /> Pixels
                         </h4>
                     </a>
                     <p className="agileinfo">

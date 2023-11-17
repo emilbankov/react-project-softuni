@@ -9,8 +9,7 @@ export default function Register() {
 
     const handleRegister = (e) => {
         e.preventDefault();
-        // Add your registration logic here
-        console.log('Registering with:', username, email, password, confirmPassword);
+        // TODO
     };
 
     return (

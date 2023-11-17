@@ -21,7 +21,7 @@ export default function HomeHeader() {
                     <div className="navbar-header">
                         <a href="index.html">
                             <h1>
-                                Infinite <img className={styles["img-logo-white"]} src="../images/logo.png" alt=" " /> Pixels
+                                Infinite <img className={styles["img-logo-white"]} src="/images/logo.png" alt=" " /> Pixels
                             </h1>
                         </a>
                     </div>
@@ -52,13 +52,13 @@ export default function HomeHeader() {
             <div className="slider">
                 <ul className="rslides" id="slider">
                     <li>
-                        <img src="../images/banner1.jpg" alt="" />
+                        <img src="/images/banner1.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="../images/banner2.jpg" alt="" />
+                        <img src="/images/banner2.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="../images/banner3.jpg" alt="" />
+                        <img src="/images/banner3.jpg" alt="" />
                     </li>
                 </ul>
             </div>
