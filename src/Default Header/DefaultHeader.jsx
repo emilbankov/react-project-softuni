@@ -16,7 +16,7 @@ export default function DefaultHeader() {
                         </button>
                         <a href="index.html">
                             <h1>
-                                Infinite <img className={styles["img-logo-white"]} src="images/logo.png" alt=" " /> Pixels
+                                Infinite <img className={styles["img-logo-white"]} src="../images/logo.png" alt=" " /> Pixels
                             </h1>
                         </a>
                     </div>
@@ -30,16 +30,16 @@ export default function DefaultHeader() {
                                 <Link to="/games">Games</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Add Game</Link>
+                                <Link to="/games/create">Add Game</Link>
                             </li>
                             <li className="hover-effect">
                                 <Link to="/about">About</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Login</Link>
+                                <Link to="/login">Login</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Register</Link>
+                                <Link to="/register">Register</Link>
                             </li>
                         </ul>
                     </div>

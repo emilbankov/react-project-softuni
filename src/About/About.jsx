@@ -18,7 +18,7 @@ export default function About() {
                         <div className="col-md-6 about-grid-right-w3-agile">
                             <div className="grid-w3ls">
                                 <figure className="effect-zoe">
-                                    <img src="images/about.jpg" alt=" " className="img-responsive" />
+                                    <img src="../images/about.jpg" alt=" " className="img-responsive" />
                                     <figcaption>
                                         <h3>Kids<span>Video</span>Game</h3>
                                         <p className="icon-links">
@@ -43,7 +43,7 @@ export default function About() {
                     </div>
                     <div className="col-md-8 col-sm-8 collection-right">
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-1">
-                            <img src="images/c1.png" alt="" />
+                            <img src="../images/c1.png" alt="" />
                             <h3>Convallis </h3>
                             <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
                         </div>
@@ -51,7 +51,7 @@ export default function About() {
 
                         </div>
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-3">
-                            <img src="images/c2.png" alt="" />
+                            <img src="../images/c2.png" alt="" />
                             <h3>Lacinia</h3>
                             <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
                         </div>
@@ -59,7 +59,7 @@ export default function About() {
 
                         </div>
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-5">
-                            <img src="images/c3.png" alt="" />
+                            <img src="../images/c3.png" alt="" />
                             <h3>Sapien</h3>
                             <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
                         </div>
@@ -79,7 +79,7 @@ export default function About() {
                     <div className="w3l_team_grids-agile">
                         <div className="col-md-3 w3l_team_grid">
                             <div className="view view-second">
-                                <img src="images/t1.jpg" alt=" " className="img-responsive" />
+                                <img src="../images/t1.jpg" alt=" " className="img-responsive" />
                                 <div className="mask"></div>
                                 <div className="content">
                                     <div className="w3l_social_icons w3l_social_icons1">
@@ -98,7 +98,7 @@ export default function About() {
                         </div>
                         <div className="col-md-3 w3l_team_grid">
                             <div className="view view-second">
-                                <img src="images/t2.jpg" alt=" " className="img-responsive" />
+                                <img src="../images/t2.jpg" alt=" " className="img-responsive" />
                                 <div className="mask"></div>
                                 <div className="content">
                                     <div className="w3l_social_icons w3l_social_icons1">
@@ -117,7 +117,7 @@ export default function About() {
                         </div>
                         <div className="col-md-3 w3l_team_grid">
                             <div className="view view-second">
-                                <img src="images/t3.jpg" alt=" " className="img-responsive" />
+                                <img src="../images/t3.jpg" alt=" " className="img-responsive" />
                                 <div className="mask"></div>
                                 <div className="content">
                                     <div className="w3l_social_icons w3l_social_icons1">
@@ -136,7 +136,7 @@ export default function About() {
                         </div>
                         <div className="col-md-3 w3l_team_grid">
                             <div className="view view-second">
-                                <img src="images/t4.jpg" alt=" " className="img-responsive" />
+                                <img src="../images/t4.jpg" alt=" " className="img-responsive" />
                                 <div className="mask"></div>
                                 <div className="content">
                                     <div className="w3l_social_icons w3l_social_icons1">

@@ -21,7 +21,7 @@ export default function HomeHeader() {
                     <div className="navbar-header">
                         <a href="index.html">
                             <h1>
-                                Infinite <img className={styles["img-logo-white"]} src="images/logo.png" alt=" " /> Pixels
+                                Infinite <img className={styles["img-logo-white"]} src="../images/logo.png" alt=" " /> Pixels
                             </h1>
                         </a>
                     </div>
@@ -34,16 +34,16 @@ export default function HomeHeader() {
                                 <Link to="/games">Games</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Add Game</Link>
+                                <Link to="/games/create">Add Game</Link>
                             </li>
                             <li className="hover-effect">
                                 <Link to="/about">About</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Login</Link>
+                                <Link to="/login">Login</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="#">Register</Link>
+                                <Link to="/register">Register</Link>
                             </li>
                         </ul>
                     </div>
@@ -52,13 +52,13 @@ export default function HomeHeader() {
             <div className="slider">
                 <ul className="rslides" id="slider">
                     <li>
-                        <img src="images/banner1.jpg" alt="" />
+                        <img src="../images/banner1.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="images/banner2.jpg" alt="" />
+                        <img src="../images/banner2.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="images/banner3.jpg" alt="" />
+                        <img src="../images/banner3.jpg" alt="" />
                     </li>
                 </ul>
             </div>

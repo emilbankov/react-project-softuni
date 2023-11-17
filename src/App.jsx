@@ -6,6 +6,8 @@ import Games from "./Games/Games.jsx"
 import HomeHeader from "./Home Header/HomeHeader.jsx"
 import Home from "./Home/Home.jsx"
 import { Routes, Route, useLocation } from "react-router-dom"
+import Login from "./Login/Login.jsx"
+import Register from "./Register/Register.jsx"
 
 function App() {
   const location = useLocation();
@@ -25,6 +27,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/games/create" element={<Card />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       {/* <Card /> */}
