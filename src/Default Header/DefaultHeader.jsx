@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styles from "./DefaultHeader.module.css"
 
 export default function DefaultHeader() {
@@ -23,22 +24,22 @@ export default function DefaultHeader() {
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav navbar-right">
                             <li className="hover-effect">
-                                <a href="index.html">Home</a>
+                                <Link to="/">Home</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="games.html">Games</a>
+                                <Link to="/games">Games</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Add Game</a>
+                                <Link to="#">Add Game</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="about.html">About</a>
+                                <Link to="/about">About</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Login</a>
+                                <Link to="#">Login</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Register</a>
+                                <Link to="#">Register</Link>
                             </li>
                         </ul>
                     </div>

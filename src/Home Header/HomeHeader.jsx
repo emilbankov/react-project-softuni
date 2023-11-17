@@ -1,6 +1,19 @@
+import { Link } from "react-router-dom"
 import styles from "./HomeHeader.module.css"
+import { useEffect } from "react"
 
 export default function HomeHeader() {
+    useEffect(() => {
+        $("#slider").responsiveSlides({
+            auto: true,
+            autoPlaySpeed: 3000,
+            nav: false,
+            speed: 1000,
+            namespace: "callbacks",
+            pager: true,
+        });
+    }, []);
+
     return (
         <div className="header">
             <nav className="navbar navbar-default">
@@ -15,22 +28,22 @@ export default function HomeHeader() {
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav navbar-right">
                             <li className="hover-effect">
-                                <a href="index.html">Home</a>
+                                <Link to="/">Home</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="games.html">Games</a>
+                                <Link to="/games">Games</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Add Game</a>
+                                <Link to="#">Add Game</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="about.html">About</a>
+                                <Link to="/about">About</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Login</a>
+                                <Link to="#">Login</Link>
                             </li>
                             <li className="hover-effect">
-                                <a href="#">Register</a>
+                                <Link to="#">Register</Link>
                             </li>
                         </ul>
                     </div>

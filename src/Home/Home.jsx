@@ -1,4 +1,17 @@
+import { useEffect } from "react"
+
 export default function Home() {
+    useEffect(() => {
+        $("#flexiselDemo1").flexisel({
+          visibleItems: 4,
+          animationSpeed: 1000,
+          autoPlay: true,
+          autoPlaySpeed: 3000,
+          pauseOnHover: true,
+        });
+      }, []);
+
+
     return (
         <>
             <div className="trend-w3layouts">
