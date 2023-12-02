@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Register.module.css'
+import { Link } from "react-router-dom";
 
 export default function Register() {
     const [username, setUsername] = useState('');
@@ -53,7 +54,10 @@ export default function Register() {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
 
-                    <button type="submit">Register</button>
+                    <div>
+                        <button type="submit">Register</button>
+                        <Link to="/login">Already have an account?</Link>
+                    </div>
                 </form>
             </div>
         </div>

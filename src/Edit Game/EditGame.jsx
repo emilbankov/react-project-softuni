@@ -46,14 +46,6 @@ export default function EditGame() {
                         onChange={(e) => setImageUrl(e.target.value)}
                     />
 
-                    <label htmlFor="description">Description:</label>
-                    <textarea
-                        id="description"
-                        placeholder="Enter game description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                    ></textarea>
-
                     <label htmlFor="developer">Developer:</label>
                     <input
                         type="text"
@@ -71,6 +63,14 @@ export default function EditGame() {
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
                     />
+
+                    <label htmlFor="description">Description:</label>
+                    <textarea
+                        id="description"
+                        placeholder="Enter game description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                    ></textarea>
 
                     <button type="submit">Edit Game</button>
                 </form>

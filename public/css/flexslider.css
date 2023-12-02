@@ -188,11 +188,11 @@ html[xmlns] .slides {
 	cursor: default;
 }
 
-@media screen and (max-width:1440px) {}
+d screen and (max-width:1440px) {}
 
-@media screen and (max-width: 1366px) {}
+d screen and (max-width: 1366px) {}
 
-@media screen and (max-width: 1080px) {
+d screen and (max-width: 1080px) {
 	.flex-control-nav {
 		right: -40%;
 	}
@@ -202,25 +202,25 @@ html[xmlns] .slides {
 	}
 }
 
-@media screen and (max-width:991px) {
+d screen and (max-width:991px) {
 	.flex-control-nav {
 		right: -15%;
 	}
 }
 
-@media screen and (max-width:667px) {
+d screen and (max-width:667px) {
 	.flex-direction-nav .flex-next {
 		right: 90%;
 	}
 }
 
-@media screen and (max-width: 600px) {
+d screen and (max-width: 600px) {
 	.flex-control-nav {
 		right: 0%;
 	}
 }
 
-@media screen and (max-width: 480px) {
+d screen and (max-width: 480px) {
 	section.slider {
 		padding-top: 0%;
 	}
@@ -231,13 +231,13 @@ html[xmlns] .slides {
 
 }
 
-@media screen and (max-width: 414px) {
+d screen and (max-width: 414px) {
 	.flex-direction-nav .flex-next {
 		right: 87%;
 	}
 }
 
-@media screen and (max-width: 320px) {
+d screen and (max-width: 320px) {
 	section.slider {
 		padding-top: 0%;
 	}

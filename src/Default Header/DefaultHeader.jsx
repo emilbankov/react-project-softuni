@@ -14,11 +14,11 @@ export default function DefaultHeader() {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a href="index.html">
+                        <Link to="/">
                             <h1>
                                 Infinite <img className={styles["img-logo-white"]} src="/images/logo.png" alt=" " /> Pixels
                             </h1>
-                        </a>
+                        </Link>
                     </div>
 
                     <div id="navbar" className="navbar-collapse collapse">

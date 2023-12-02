@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Login.module.css';
+import { Link } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ export default function Login() {
     const handleLogin = (e) => {
         e.preventDefault();
         // TODO
-       
+
     };
 
     return (
@@ -34,7 +35,11 @@ export default function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <button type="submit">Login</button>
+                    <div>
+                        <button type="submit">Login</button>
+                        <Link  to="/register">Don't have an account?</Link>
+                    </div>
+
                 </form>
             </div>
         </div>

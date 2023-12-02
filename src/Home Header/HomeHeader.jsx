@@ -19,11 +19,17 @@ export default function HomeHeader() {
             <nav className="navbar navbar-default">
                 <div className="container">
                     <div className="navbar-header">
-                        <a href="index.html">
+                        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span className="sr-only">Toggle navigation</span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </button>
+                        <Link to="/">
                             <h1>
                                 Infinite <img className={styles["img-logo-white"]} src="/images/logo.png" alt=" " /> Pixels
                             </h1>
-                        </a>
+                        </Link>
                     </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav navbar-right">

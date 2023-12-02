@@ -3,7 +3,6 @@
 	Author URL: http://w3layouts.com
 --*/
 
-/*-- Reset Code --*/
 body {
 	padding: 0;
 	margin: 0;
@@ -74,9 +73,7 @@ img {
 	width: 100%;
 }
 
-/*-- //Reset Code --*/
 
-/*-- Banner --*/
 /*-- Navbar --*/
 .navbar {
 	margin-bottom: 0;
@@ -987,7 +984,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .collection-text {
 	background-color: #000;
 	text-align: center;
-	padding-top: 75px;
+	padding: 37.5px 0px;
 }
 
 .collection-text img {
@@ -1010,22 +1007,22 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .collection-left {
 	background: url(../images/c1.jpg) no-repeat 0px 0px;
 	background-size: cover;
-	min-height: 700px;
+	min-height: 697px;
 }
 
 .collection-grid.collection-image.collection-grid-2 {
-	background: url(../images/c4.jpg) no-repeat 0px 0px;
-	background-size: cover;
+	background: url(../images/Minecraft.png) no-repeat 0px 0px;
+	background-size: 100% 100%;
 }
 
 .collection-grid.collection-image.collection-grid-4 {
-	background: url(../images/c3.jpg) no-repeat 0px 0px;
-	background-size: cover;
+	background: url(../images/Super\ Mario.jpg) no-repeat 0px 0px;
+	background-size: 101% 100%;
 }
 
 .collection-grid.collection-image.collection-grid-6 {
-	background: url(../images/c2.jpg) no-repeat 0px 0px;
-	background-size: cover;
+	background: url(../images/Pac\ Man.jpg) no-repeat 0px 0px;
+	background-size: 100% 100%;
 }
 
 /*-- //Collections --*/
@@ -2457,11 +2454,11 @@ a.blog-read:hover {
 
 	.navbar-default .navbar-toggle {
 		background: transparent;
-		border: 2px solid #E91E63;
+		border: 2px solid white;
 	}
 
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #E91E63;
+		background-color: white;
 	}
 
 	.navbar-toggle {
@@ -3589,7 +3586,7 @@ label {
 
 input,
 textarea {
-	width: 500px;
+	width: 400px;
 	padding: 10px 10px;
 	margin-top: 5px;
 	box-sizing: border-box;
@@ -3603,7 +3600,23 @@ textarea#description {
 	height: 150px;
 }
 
-button {
+.login-container div a,
+.register-container div a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s ease;
+}
+
+.login-container div a:hover,
+.register-container div a:hover {
+	border-bottom: 1px solid white;
+}
+
+.login-page button,
+.register-page button,
+.edit-game-page button,
+.add-game-page button {
 	width: 140px;
 	margin-top: 15px;
 	background-color: white;
@@ -3612,11 +3625,14 @@ button {
 	border: none;
 	border-radius: 20px;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
-	font-family: 'open Sans', sans-serif;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	font-family: 'Open Sans', sans-serif;
 }
 
-button:hover {
+.login-page button:hover,
+.register-page button:hover,
+.edit-game-page button:hover,
+.add-game-page button:hover {
 	background-color: rgba(0, 0, 0, 0);
 	color: white;
 }

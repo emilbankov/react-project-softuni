@@ -6,3 +6,8 @@ h2 {
 	font-family: 'open Sans', sans-serif;
     font-weight: bold;
 }
+
+
+button {
+    margin-right: 10px;
+}

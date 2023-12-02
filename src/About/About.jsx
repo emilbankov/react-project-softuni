@@ -1,3 +1,5 @@
+import './About.module.css';
+
 export default function About() {
     return (
         <>
@@ -36,125 +38,35 @@ export default function About() {
                 </div>
             </div>
 
+            <h2>Fun Facts About Games</h2>
             <div className="collection-agileits">
                 <div className="collection-grids-agileits-w3layouts">
-                    <div className="col-md-4 col-sm-4 collection-left">
-
-                    </div>
+                    <div className="col-md-4 col-sm-4 collection-left"></div>
                     <div className="col-md-8 col-sm-8 collection-right">
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-1">
                             <img src="/images/c1.png" alt="" />
-                            <h3>Convallis </h3>
-                            <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                            <h3>Super Mario </h3>
+                            <p>Mario was originally known as "Jumpman" in Donkey Kong. He got his iconic name from Nintendo's warehouse landlord, Mario Segale.</p>
                         </div>
-                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-2">
+                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-2"></div>
 
-                        </div>
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-3">
                             <img src="/images/c2.png" alt="" />
-                            <h3>Lacinia</h3>
-                            <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                            <h3>Pac Man</h3>
+                            <p>The ghosts in Pac Man have distinct personalities. Blinky is programmed to chase you, Pinky tries to ambush, Inky is random, and Clyde alternates between random and chasing.</p>
                         </div>
-                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-4">
+                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-4"></div>
 
-                        </div>
                         <div className="col-md-4 col-sm-4 collection-grid collection-text collection-grid-5">
                             <img src="/images/c3.png" alt="" />
-                            <h3>Sapien</h3>
-                            <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                            <h3>Minecraft</h3>
+                            <p>The world in Minecraft is virtually infinite. If you were to walk from one end to the other without stopping, it would take over 820 hours in real time.</p>
                         </div>
-                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-6">
+                        <div className="col-md-4 col-sm-4 collection-grid collection-image collection-grid-6"></div>
 
-                        </div>
                         <div className="clearfix"></div>
                     </div>
                     <div className="clearfix"></div>
-                </div>
-            </div>
-
-
-            <div className="team-w3layouts">
-                <div className="container">
-                    <h3>Our Team</h3>
-                    <div className="w3l_team_grids-agile">
-                        <div className="col-md-3 w3l_team_grid">
-                            <div className="view view-second">
-                                <img src="/images/t1.jpg" alt=" " className="img-responsive" />
-                                <div className="mask"></div>
-                                <div className="content">
-                                    <div className="w3l_social_icons w3l_social_icons1">
-                                        <ul>
-                                            <li><a href="#" className="linkedin"></a></li>
-                                            <li><a href="#" className="google"></a></li>
-                                            <li><a href="#" className="twitter"></a></li>
-                                            <li><a href="#" className="facebook"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                                </div>
-                            </div>
-                            <h4>Mariya Thomas</h4>
-                            <p>Games Designer</p>
-                        </div>
-                        <div className="col-md-3 w3l_team_grid">
-                            <div className="view view-second">
-                                <img src="/images/t2.jpg" alt=" " className="img-responsive" />
-                                <div className="mask"></div>
-                                <div className="content">
-                                    <div className="w3l_social_icons w3l_social_icons1">
-                                        <ul>
-                                            <li><a href="#" className="linkedin"></a></li>
-                                            <li><a href="#" className="google"></a></li>
-                                            <li><a href="#" className="twitter"></a></li>
-                                            <li><a href="#" className="facebook"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                                </div>
-                            </div>
-                            <h4>Dino Jass</h4>
-                            <p>Games Designer</p>
-                        </div>
-                        <div className="col-md-3 w3l_team_grid">
-                            <div className="view view-second">
-                                <img src="/images/t3.jpg" alt=" " className="img-responsive" />
-                                <div className="mask"></div>
-                                <div className="content">
-                                    <div className="w3l_social_icons w3l_social_icons1">
-                                        <ul>
-                                            <li><a href="#" className="linkedin"></a></li>
-                                            <li><a href="#" className="google"></a></li>
-                                            <li><a href="#" className="twitter"></a></li>
-                                            <li><a href="#" className="facebook"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                                </div>
-                            </div>
-                            <h4>Michael Doe</h4>
-                            <p>Games Designer</p>
-                        </div>
-                        <div className="col-md-3 w3l_team_grid">
-                            <div className="view view-second">
-                                <img src="/images/t4.jpg" alt=" " className="img-responsive" />
-                                <div className="mask"></div>
-                                <div className="content">
-                                    <div className="w3l_social_icons w3l_social_icons1">
-                                        <ul>
-                                            <li><a href="#" className="linkedin"></a></li>
-                                            <li><a href="#" className="google"></a></li>
-                                            <li><a href="#" className="twitter"></a></li>
-                                            <li><a href="#" className="facebook"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                                </div>
-                            </div>
-                            <h4>Rita James</h4>
-                            <p>Games Designer</p>
-                        </div>
-                        <div className="clearfix"> </div>
-                    </div>
                 </div>
             </div>
         </>
