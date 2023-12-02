@@ -1,4 +1,26 @@
-h2 {
-    font-size: 40px;
+h3 {
+    font-size: 35px;
     color: black;
+    font-weight: normal;
+}
+
+div .collection-agileits h2 {
+    color: white;
+    padding-bottom: 60px;
+}
+
+div .container h3 {
+    color: black;
+    font-weight: bold;
+}
+
+p, li {
+    font-size: 19px;
+    text-align: center;
+}
+
+div .about {
+    background-color: black;
+    color: white;
+    z-index: 1;
 }

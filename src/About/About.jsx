@@ -4,42 +4,54 @@ export default function About() {
     return (
         <>
             <div className="about-agileinfo" id="about">
+                <h3>About Us</h3>
                 <div className="container">
-                    <h2>About Us</h2>
-                    <div className="about-grids-w3-agileits">
-                        <div className="col-md-6 about-grid-left-agileits-w3layouts">
-                            <ul>
-                                <li><i>1.</i><a className="link link--kumya" href="single.html"><span data-letters="Qui ratione voluptatem dolores eos qui">Qui ratione voluptatem dolores</span></a></li>
-                                <li><i>2.</i><a className="link link--kumya" href="single.html"><span data-letters="Dolores eos qui ratione voluptatem sequi">Dolores eos qui ratione volu</span></a></li>
-                                <li><i>3.</i><a className="link link--kumya" href="single.html"><span data-letters="Voluptatem quia voluptas sit asper">Voluptatem quia voluptas sit asper</span></a></li>
-                                <li><i>4.</i><a className="link link--kumya" href="single.html"><span data-letters="Consectetur adipiscing elit, incid">Consectetur adipiscing elit, incid</span></a></li>
-                                <li><i>5.</i><a className="link link--kumya" href="single.html"><span data-letters="Quia voluptas sit aspernatur aut odit">Quia voluptas sit aspernatur aut</span></a></li>
-                                <li><i>6.</i><a className="link link--kumya" href="single.html"><span data-letters="Eos qui ratione voluptatem sequi">Eos qui ratione voluptatem sequi</span></a></li>
-                            </ul>
-                        </div>
-                        <div className="col-md-6 about-grid-right-w3-agile">
-                            <div className="grid-w3ls">
-                                <figure className="effect-zoe">
-                                    <img src="/images/about.jpg" alt=" " className="img-responsive" />
-                                    <figcaption>
-                                        <h3>Kids<span>Video</span>Game</h3>
-                                        <p className="icon-links">
-                                            <a href="#"><span className="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
-                                            <a href="#"><span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-                                            <a href="#"><span className="glyphicon glyphicon-paperclip" aria-hidden="true"></span></a>
-                                        </p>
-                                        <p className="description">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div className="clearfix"> </div>
+                    {/* <h3>Welcome to Infinite Pixels: Your Gateway to Gaming Excellence</h3> */}
+                    <div className='idc'>
+
+                    <div className="bottom-left">
+                        {/* Content for the bottom-left div */}
                     </div>
+                    <div className="top-right">
+                        {/* Content for the bottom-left div */}
+                    </div>
+                    </div>
+                    {/* <div className='about'>
+                            <section>
+                                <p>Infinite Pixels was born out of a shared love for the captivating world of video games. As avid gamers ourselves, we recognized the need for a platform that goes beyond the ordinary—an online haven where gamers of all levels can discover, explore, and indulge in the latest and greatest titles.</p>
+                                <p>Driven by a commitment to quality, innovation, and customer satisfaction, Infinite Pixels was conceptualized to redefine the way you experience gaming. We understand that every gamer is unique, and our collection reflects this diversity. From action-packed blockbusters to indie gems, we curate a selection that caters to every taste and preference.</p>
+                            </section>
+
+                            <section>
+                                <h3>What Sets Us Apart</h3>
+                                <ul>
+                                    <li><strong>Curated Selection:</strong> Our team of gaming enthusiasts scours the digital landscape to bring you a carefully curated selection of titles that span genres, platforms, and playstyles.</li>
+                                    <li><strong>Exceptional Service:</strong> We don't just sell games; we provide an unparalleled shopping experience. Our commitment to customer service means you can shop with confidence, knowing that your satisfaction is our top priority.</li>
+                                    <li><strong>Infinite Possibilities:</strong> True to our name, we believe in infinite possibilities. From classic favorites to cutting-edge releases, we embrace the ever-evolving landscape of gaming.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h3>Join the Infinite Pixels Community</h3>
+                                <p>Infinite Pixels is more than just a store; it's a community of like-minded individuals who share a passion for gaming. Connect with us on social media, join discussions, and stay informed about the latest releases, updates, and gaming events. We're not just selling games; we're building a community where every pixel counts.</p>
+                            </section>
+
+                            <section>
+                                <h3>Thank You for Choosing Infinite Pixels</h3>
+                                <p>Whether you're a seasoned gamer or just starting your digital journey, we extend our heartfelt gratitude for choosing Infinite Pixels as your gaming destination. We are committed to providing you with an exceptional gaming experience, and we look forward to being a part of your gaming adventures.</p>
+                                <p>Welcome to Infinite Pixels—where the possibilities are endless, and the pixels are infinite.</p>
+                            </section>
+                        </div> */}
+
+
+
+                    <div className="clearfix"> </div>
+
                 </div>
             </div>
 
-            <h2>Fun Facts About Games</h2>
             <div className="collection-agileits">
+                <h2>Fun Facts About Games</h2>
                 <div className="collection-grids-agileits-w3layouts">
                     <div className="col-md-4 col-sm-4 collection-left"></div>
                     <div className="col-md-8 col-sm-8 collection-right">
