@@ -5,11 +5,12 @@ import Footer from "./Footer/Footer.jsx"
 import Games from "./Games/Games.jsx"
 import HomeHeader from "./Home Header/HomeHeader.jsx"
 import Home from "./Home/Home.jsx"
-import { Routes, Route, useLocation } from "react-router-dom"
+import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import Login from "./Login/Login.jsx"
 import Register from "./Register/Register.jsx"
 import AddGame from "./Add Game/AddGame.jsx"
 import EditGame from "./Edit Game/EditGame.jsx"
+import Error from "./Error/Error.jsx"
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,8 @@ function App() {
         <Route path="/games/create" element={<AddGame />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/404" element={<Error />} />
+        <Route path="*" element={<Navigate to='/404' />} />
       </Routes>
 
       {/* <Card /> */}

@@ -247,6 +247,10 @@ ul.callbacks_tabs.callbacks1_tabs {
 	display: none;
 }
 
+ul.callbacks_tabs {
+	display: none;
+}
+
 .callbacks_nav {
 	left: 20px;
 }
@@ -280,7 +284,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .gallery-w3layouts h2,
 .contact-agileinfo h2,
 .events-w3layouts h2 {
-	font-size: 40px;
+	font-size: 35px;
 	color: black;
 	margin-bottom: 40px;
 }
@@ -968,7 +972,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 /*-- Collections --*/
 .collection-agileits {
-	padding: 50px 0px;
+	padding-top: 60px;
+	background-color: black;
+
 }
 
 .collection-left,
@@ -3478,7 +3484,7 @@ a.blog-read:hover {
 }
 
 /* Card CSS */
-.card-container {
+/* .card-container {
 	width: 300px;
 	overflow: hidden;
 }
@@ -3531,7 +3537,7 @@ a.blog-read:hover {
 
 .card-price {
 	margin: 0;
-}
+} */
 
 /* Forms CSS */
 .login-page,
@@ -3616,13 +3622,14 @@ textarea#description {
 .login-page button,
 .register-page button,
 .edit-game-page button,
-.add-game-page button {
+.add-game-page button,
+.error-text-container button {
 	width: 140px;
 	margin-top: 15px;
 	background-color: white;
 	color: rgb(0, 0, 0);
 	padding: 10px 15px;
-	border: none;
+	border: 2px solid transparent;
 	border-radius: 20px;
 	cursor: pointer;
 	transition: background-color 0.3s ease, color 0.3s ease;
@@ -3632,7 +3639,137 @@ textarea#description {
 .login-page button:hover,
 .register-page button:hover,
 .edit-game-page button:hover,
-.add-game-page button:hover {
+.add-game-page button:hover,
+.error-text-container button:hover {
 	background-color: rgba(0, 0, 0, 0);
 	color: white;
+	border: 2px solid white;
 }
+
+div .about {
+	background-color: #f3f3f2e0;
+	padding: 10px 100px;
+}
+
+
+.about-agileinfo .idc {
+	position: relative;
+	height: 100vh;
+}
+
+.top-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	z-index: 1;
+}
+
+.error {
+	width: 100%;
+	height: 588px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* border-radius: 20px; */
+}
+
+.error-image-container {
+	width: 302px;
+	height: 307px;
+	text-align: center;
+}
+
+.error-image-container img {
+	display: block;
+	margin: 0 auto;
+}
+
+.error-text-container {
+	text-align: center;
+	margin-top: 20px;
+	color: white;
+}
+
+/* Add this to your styles or use a separate CSS file */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+	width: 1248px;
+	margin: 0 auto;
+  }
+  
+  .card-container {
+	width: 300px;
+	overflow: hidden;
+	border: 1px solid #ddd; /* New style for the grid */
+	padding: 16px; /* New style for the grid */
+  }
+  
+  .card-image-container {
+	position: relative;
+  }
+  
+  .card-image {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  .card-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	font-size: 12px;
+  }
+  
+  .card-overlay h2 {
+	font-size: 20px;
+  }
+  
+  .card-title {
+	color: white;
+	margin: 0;
+  }
+  
+  .card-image-container:hover .card-overlay {
+	opacity: 1;
+  }
+  
+  .card-price-container {
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 10px;
+  }
+  
+  .card-price {
+	margin: 0;
+  }
+  
