@@ -636,7 +636,7 @@ a.learn:hover {
 
 /*-- //footer --*/
 .footer {
-	padding-top: 33px;
+	padding-top: 23px;
 	padding-bottom: 10px;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -3483,62 +3483,7 @@ a.blog-read:hover {
 	}
 }
 
-/* Card CSS */
-/* .card-container {
-	width: 300px;
-	overflow: hidden;
-}
-
-.card-image-container {
-	position: relative;
-}
-
-.card-image {
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
-.card-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	font-size: 12px;
-}
-
-.card-overlay h2 {
-	font-size: 20px;
-}
-
-.card-title {
-	color: white;
-	margin: 0;
-}
-
-.card-image-container:hover .card-overlay {
-	opacity: 1;
-}
-
-.card-price-container {
-	text-align: center;
-	background-color: black;
-	color: white;
-	padding: 10px;
-}
-
-.card-price {
-	margin: 0;
-} */
-
+/* My CSS */
 /* Forms CSS */
 .login-page,
 .register-page,
@@ -3548,7 +3493,7 @@ a.blog-read:hover {
 	background-size: 100% 100%;
 	width: 1240px;
 	height: 601px;
-	margin-top: 33px;
+	margin-top: 23px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -3710,66 +3655,65 @@ div .about {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 16px;
-	width: 1248px;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 9px;
+	row-gap: 16px;
+	width: 1270px;
 	margin: 0 auto;
-  }
-  
-  .card-container {
-	width: 300px;
-	overflow: hidden;
-	border: 1px solid #ddd; /* New style for the grid */
-	padding: 16px; /* New style for the grid */
-  }
-  
-  .card-image-container {
+	margin-top: 23px;
+}
+
+.card-container {
+	width: 246px;
+	padding: 5px 16px;
+	transition: box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	border: 1px solid #ddd;
+}
+
+.card-image-container {
 	position: relative;
-  }
-  
-  .card-image {
+}
+
+.card-image {
 	width: 100%;
 	height: auto;
 	display: block;
-  }
-  
-  .card-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	font-size: 12px;
-  }
-  
-  .card-overlay h2 {
-	font-size: 20px;
-  }
-  
-  .card-title {
-	color: white;
-	margin: 0;
-  }
-  
-  .card-image-container:hover .card-overlay {
-	opacity: 1;
-  }
-  
-  .card-price-container {
+	margin-bottom: 8px;
+}
+
+.card-title {
+	font-size: 16px;
+	color: black;
+}
+
+.card-genre {
+	font-size: 14px;
+	color: black;
+}
+
+.card-price {
+	font-size: 18px;
 	text-align: center;
-	background-color: black;
-	color: white;
-	padding: 10px;
-  }
-  
-  .card-price {
-	margin: 0;
-  }
-  
+	color: black;
+}
+
+.card-superscript {
+	font-size: 11px;
+	position: relative;
+	z-index: 9;
+	top: -0.4em;
+}
+
+.card-container .card-title {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.card-container .card-genre {
+	display: block;
+	margin-bottom: 10px;
+}
