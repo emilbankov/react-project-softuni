@@ -27,7 +27,7 @@ export default function DefaultHeader() {
                                 <Link to="/">Home</Link>
                             </li>
                             <li className="hover-effect">
-                                <Link to="/games">Games</Link>
+                                <Link to="/games/catalog">Games</Link>
                             </li>
                             <li className="hover-effect">
                                 <Link to="/games/create">Add Game</Link>

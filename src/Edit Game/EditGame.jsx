@@ -3,11 +3,12 @@ import './EditGame.module.css'
 
 export default function EditGame() {
     const [title, setTitle] = useState('');
-    const [genre, setGenre] = useState('');
     const [imageUrl, setImageUrl] = useState('');
-    const [description, setDescription] = useState('');
+    const [genre, setGenre] = useState('');
     const [developer, setDeveloper] = useState('');
+    const [players, setPlayers] = useState('');
     const [price, setPrice] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleAddGame = (e) => {
         e.preventDefault();
@@ -28,15 +29,6 @@ export default function EditGame() {
                         onChange={(e) => setTitle(e.target.value)}
                     />
 
-                    <label htmlFor="genre">Genre:</label>
-                    <input
-                        type="text"
-                        id="genre"
-                        placeholder="Enter game genre"
-                        value={genre}
-                        onChange={(e) => setGenre(e.target.value)}
-                    />
-
                     <label htmlFor="imageUrl">Image URL:</label>
                     <input
                         type="text"
@@ -46,6 +38,15 @@ export default function EditGame() {
                         onChange={(e) => setImageUrl(e.target.value)}
                     />
 
+                    <label htmlFor="genre">Genre:</label>
+                    <input
+                        type="text"
+                        id="genre"
+                        placeholder="Enter game genre"
+                        value={genre}
+                        onChange={(e) => setGenre(e.target.value)}
+                    />
+
                     <label htmlFor="developer">Developer:</label>
                     <input
                         type="text"
@@ -53,6 +54,15 @@ export default function EditGame() {
                         placeholder="Enter game developer"
                         value={developer}
                         onChange={(e) => setDeveloper(e.target.value)}
+                    />
+
+                    <label htmlFor="players">Players:</label>
+                    <input
+                        type="number"
+                        id="players"
+                        placeholder="Enter players count"
+                        value={players}
+                        onChange={(e) => setPlayers(e.target.value)}
                     />
 
                     <label htmlFor="price">Price:</label>
