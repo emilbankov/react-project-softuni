@@ -3863,7 +3863,7 @@ div .about {
 .reviews-title {
 	font-size: 26px;
 	text-align: center;
-	width: 1226px;
+	width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -3871,14 +3871,71 @@ div .about {
 
 .review-item {
 	border: 1px solid #ddd;
+	border-radius: 30px;
 	padding: 10px;
 	margin-bottom: 10px;
+	display: flex;
 }
 
 .review-author {
+	background-color: #f5f5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 200px;
+	min-height: 120px;
+	border-radius: 30px;
+	flex-direction: column;
+}
+
+.author-username {
+	font-size: 16px;
 	font-weight: bold;
+	align-self: center;
+	margin-top: 5px;
+	/* Adjust as needed */
+}
+
+.author-banner {
+	background-color: rgba(0, 0, 0, 0.822);
+	color: white;
+	font-size: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.review-content {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
 }
 
 .review-text {
-	margin-top: 5px;
+	font-size: 16px;
+	margin-top: 2.5px;
+}
+
+.review-title {
+	font-size: 20px;
+	margin-bottom: 2.5px;
+	font-weight: bold;
+}
+
+.add-review {
+	width: 1204px;
+	height: 120px;
+	border: 1px solid #ddd;
+	border-radius: 30px;
+	padding: 10px 10px;
+}
+
+.add-review label {
+	font-size: 18px;
+	font-weight: 400;
 }

@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './Details.module.css';
 
 export default function Details() {
+    const [title, setTitle] = useState('');
+    const [review, setReview] = useState('');
     let price = "119,99";
     let [dollars, cents] = price.split(",");
 
@@ -33,9 +36,7 @@ export default function Details() {
                     </div>
                     <div className="details-description">
                         <span>
-                            Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. 
-
-                            Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.
+                            Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.
                         </span>
                     </div>
                 </div>
@@ -51,36 +52,101 @@ export default function Details() {
             </div>
             <div id="reviews" className="reviews-section">
                 <span className='reviews-title'>Reviews</span>
-                <div className="review-item">
-                    <div className="review-author">
-                        milesmorales
-                    </div>
-                    <div className="review-text">
-                        Amazing game! The story is so cool!!
-                    </div>
+                <div className="add-review">
+                    <form>
+                        <label htmlFor="title">Title:</label>
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="Enter review title"
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                        />
+
+                        <label htmlFor="review">Review:</label>
+                        <input
+                            type="text"
+                            id="review"
+                            placeholder="Enter your review"
+                            value={review}
+                            onChange={(e) => setReview(e.target.value)}
+                        />
+                    </form>
                 </div>
-                <div className="review-item">
-                    <div className="review-author">
-                        spiderman
+                <div className="review-items">
+                    <div className="review-item">
+                        <div className="review-author">
+                            <div className="author-banner">
+                                M
+                            </div>
+                            <div className="author-username">
+                                milesmorales
+                            </div>
+                        </div>
+                        <div className="review-content">
+                            <div className="review-title">
+                                One of the best games
+                            </div>
+                            <div className="review-text">
+                                Amazing game! The story is so cool!!
+                            </div>
+                        </div>
                     </div>
-                    <div className="review-text">
-                        Amazing game! The story is so cool!!
+                    <div className="review-item">
+                        <div className="review-author">
+                            <div className="author-banner">
+                                S
+                            </div>
+                            <div className="author-username">
+                                spiderman
+                            </div>
+                        </div>
+                        <div className="review-content">
+                            <div className="review-title">
+                                One of the best games
+                            </div>
+                            <div className="review-text">
+                                Amazing game! The story is so cool!!
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="review-item">
-                    <div className="review-author">
-                        zaharibaharov
+                    <div className="review-item">
+                        <div className="review-author">
+                            <div className="author-banner">
+                                Z
+                            </div>
+                            <div className="author-username">
+                                zaharibaharov
+                            </div>
+                        </div>
+                        <div className="review-content">
+                            <div className="review-title">
+                                One of the best games
+                            </div>
+                            <div className="review-text">
+                                Spider-Man 2 is an absolute thrill ride from start to finish! The web-swinging mechanics make traversing New York City a joy, and the dynamic duo of Peter Parker and Miles Morales adds depth to the storyline. The graphics are stunning, and the attention to detail in recreating Marvel's universe is impressive. Whether you're a fan of the comics or new to the Spider-Man world, this game delivers an unforgettable experience filled with action, emotion, and an abundance of web-slinging fun!
+                            </div>
+                        </div>
                     </div>
-                    <div className="review-text">
-                        Amazing game! The story is so cool!!
-                    </div>
-                </div>
-                <div className="review-item">
-                    <div className="review-author">
-                        asenblatechki
-                    </div>
-                    <div className="review-text">
-                        Amazing game! The story is so cool!!
+                    <div className="review-item">
+                        <div className="review-author">
+                            <div className="author-banner">
+                                A
+                            </div>
+                            <div className="author-details">
+                                <div className="author-username">
+                                    asenblatechki
+                                </div>
+                            </div>
+                        </div>
+                        <div className="review-content">
+                            <div className="review-title">
+                                One of the best games
+                            </div>
+                            <div className="review-text">
+                                Amazing game! The story is so cool!!
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
