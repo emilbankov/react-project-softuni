@@ -3517,6 +3517,13 @@ a.blog-read:hover {
 	color: white;
 }
 
+.login-container h2,
+.register-container h2,
+.add-game-container h2,
+.edit-game-container h2 {
+	font-size: 24px;
+}
+
 .login-form,
 .register-form,
 .add-game-form,
@@ -3531,8 +3538,13 @@ a.blog-read:hover {
 	height: 800px;
 }
 
-label {
+.login-form label,
+.register-form label,
+.add-game-form label,
+.edit-game-form label {
 	margin-top: 10px;
+	font-size: 18px;
+
 }
 
 input,
@@ -3548,7 +3560,7 @@ textarea {
 }
 
 textarea#description {
-	height: 150px;
+	height: 100px;
 }
 
 .login-container div a,
@@ -3651,8 +3663,6 @@ div .about {
 	color: white;
 }
 
-/* Add this to your styles or use a separate CSS file */
-
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -3716,4 +3726,159 @@ div .about {
 .card-container .card-genre {
 	display: block;
 	margin-bottom: 10px;
+}
+
+.details-contaier {
+	max-width: 1270px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px;
+	border-left: 2px solid #e7e7e7;
+	border-right: 2px solid #e7e7e7;
+	margin-top: 23px;
+}
+
+.details-product {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.details-title {
+	font-size: 26px;
+	text-align: left;
+	margin-bottom: 6px;
+}
+
+.details-image {
+	flex: 1;
+	max-width: 400px;
+	margin-right: 35px;
+}
+
+.details {
+	flex: 1;
+	max-width: 500px;
+}
+
+.details-list {
+	list-style: none;
+	padding: 0;
+}
+
+.details-list li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.details-list strong {
+	display: inline-block;
+	width: 100px;
+	font-weight: bold;
+	text-align: left;
+	font-size: 18px;
+}
+
+.details-list span {
+	flex: 1;
+	margin-left: 10px;
+	text-align: left;
+}
+
+.details-description {
+	border-top: 2px solid #e7e7e7;
+	border-bottom: 2px solid #e7e7e7;
+	padding: 10px 0;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.details-price-container {
+	flex: 1;
+	max-width: 260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 35px;
+}
+
+.details-price-box {
+	margin-bottom: 6px;
+	width: 260px;
+	height: 180px;
+	background-color: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.details-price {
+	font-size: 26px;
+}
+
+.details-superscript {
+	font-size: 16px;
+	position: relative;
+	z-index: 9;
+	top: -0.4em;
+}
+
+.details-price-box button {
+	margin-top: 10px;
+	background-color: black;
+	color: white;
+	border: transparent;
+	border-radius: 10px;
+	font-size: 18px;
+	width: 160px;
+	height: 36px;
+}
+
+.details-links {
+	background-color: #f5f5f5;
+	width: 260px;
+	height: 100px;
+	font-size: 18px;
+	color: #067bb5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.details-links img {
+	width: 26px;
+	height: 26px;
+}
+
+.reviews-section {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.reviews-title {
+	font-size: 26px;
+	text-align: center;
+	width: 1226px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.review-item {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.review-author {
+	font-weight: bold;
+}
+
+.review-text {
+	margin-top: 5px;
 }
