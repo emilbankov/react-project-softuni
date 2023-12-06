@@ -266,13 +266,16 @@ ul.callbacks_tabs {
 .trend-w3layouts,
 .new-w3-agile,
 .services-agileits-w3layouts,
-.about-agileinfo,
 .team-w3layouts,
 .gallery-w3layouts,
 .contact-agileinfo,
 .events-w3layouts,
 .blog {
 	padding: 50px 0px;
+}
+
+.about-agileinfo {
+	padding-top: 23px;
 }
 
 .trend-w3layouts h2,
@@ -972,9 +975,13 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 /*-- Collections --*/
 .collection-agileits {
-	padding-top: 60px;
+	padding-top: 30px;
 	background-color: black;
+}
 
+.collection-agileits h2 {
+	margin-bottom: 30px;
+	color: white;
 }
 
 .collection-left,
@@ -3484,6 +3491,20 @@ a.blog-read:hover {
 }
 
 /* My CSS */
+/* Hide Scrollbar */
+body {
+	overflow: hidden;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+	width: 0;
+	background-color: transparent;
+}
+
 /* Forms CSS */
 .login-page,
 .register-page,
@@ -3547,8 +3568,12 @@ a.blog-read:hover {
 
 }
 
-input,
-textarea {
+.login-form input,
+.register-form input,
+.add-game-form input,
+.edit-game-form input,
+.add-game-form textarea,
+.edit-game-form textarea {
 	width: 400px;
 	padding: 10px 10px;
 	margin-top: 5px;
@@ -3603,30 +3628,29 @@ textarea#description {
 	border: 2px solid white;
 }
 
-div .about {
-	background-color: #f3f3f2e0;
-	padding: 10px 100px;
+.about-container {
+	width: 1270px;
+	margin: 20px auto;
 }
 
-
-.about-agileinfo .idc {
+.about-us-info {
 	position: relative;
 	height: 100vh;
 }
 
-.top-right {
+.about-top-left {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	width: 200px;
 	height: 200px;
 	background-color: red;
 }
 
-.bottom-left {
+.about-bottom-right {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	width: 200px;
 	height: 200px;
 	background-color: blue;
@@ -3670,7 +3694,9 @@ div .about {
 	row-gap: 16px;
 	width: 1270px;
 	margin: 0 auto;
-	margin-top: 23px;
+	margin-top: 20px;
+	border-top: 2px solid #e7e7e7;
+	padding-top: 20px;
 }
 
 .card-container {
@@ -3736,8 +3762,7 @@ div .about {
 	justify-content: space-between;
 	gap: 20px;
 	padding: 20px;
-	border-left: 2px solid #e7e7e7;
-	border-right: 2px solid #e7e7e7;
+	border: 2px solid #e7e7e7;
 	margin-top: 23px;
 }
 
@@ -3858,15 +3883,21 @@ div .about {
 .reviews-section {
 	width: 100%;
 	margin-top: 20px;
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
 }
 
-.reviews-title {
+.reviews-title,
+.add-review-title {
+	height: 38px;
 	font-size: 26px;
 	text-align: center;
 	width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 .review-item {
@@ -3928,14 +3959,97 @@ div .about {
 }
 
 .add-review {
-	width: 1204px;
-	height: 120px;
+	width: 1226px;
+	height: 214px;
 	border: 1px solid #ddd;
 	border-radius: 30px;
-	padding: 10px 10px;
+	padding: 10px 20px;
 }
 
 .add-review label {
+	display: inline-block;
+	width: 70px;
+	text-align: left;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: bold;
+}
+
+.add-review input {
+	flex: 1;
+	margin-left: 10px;
+	text-align: left;
+	width: 1100px;
+	padding: 10px 10px;
+	margin-top: 5px;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 20px;
+	font-family: 'open Sans', sans-serif;
+	color: black;
+}
+
+.add-review button {
+	width: 140px;
+	margin-top: 10px;
+	background-color: black;
+	color: white;
+	padding: 10px 15px;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.add-review button:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.add-review form>button {
+	margin-left: 522px;
+	margin-right: 522px;
+}
+
+.search-container {
+	display: flex;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 640px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.search-container input {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+
+.search-container button {
+	width: 140px;
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 0 20px 20px 0;
+	border-left: 2px solid #ccc;
+	margin-right: 0;
+}
+
+.search-container button:hover {
+	background-color: white;
+	color: black;
+}
+
+.search-container input {
+	border-right: none;
+}
+
+.catalog-header h1 {
+	margin-top: 23px;
 }
