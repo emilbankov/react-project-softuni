@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import About from "./components/About/About.jsx"
-import Card from "./components/Card/Card.jsx"
 import DefaultHeader from "./components/Default Header/DefaultHeader.jsx"
 import HomeHeader from "./components/Home Header/HomeHeader.jsx"
 import Home from "./components/Home/Home.jsx"
@@ -39,8 +38,6 @@ function App() {
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to='/404' />} />
       </Routes>
-
-      {/* <Card /> */}
 
       <Footer />
     </>
