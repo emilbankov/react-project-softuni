@@ -1,8 +1,15 @@
 import { useState } from "react";
 import './Login.module.css';
 import { Link } from "react-router-dom";
+import useForm from "../../hooks/useForm.js";
 
 export default function Login() {
+    const { values, onChange, onSubmit } = useForm({
+        email: '',
+        password: ''
+    });
+
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -16,14 +23,14 @@ export default function Login() {
         <div className="login-page">
             <div className="login-container">
                 <h2>Sign In</h2>
-                <form className="login-form" onSubmit={handleLogin}>
+                <form className="login-form" onSubmit={onSubmit}>
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
                         id="email"
                         placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={onChange}
+                        value={values.email}
                     />
 
                     <label htmlFor="password">Password:</label>
@@ -31,9 +38,9 @@ export default function Login() {
                         type="password"
                         id="password"
                         placeholder="Enter your password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
+                        onChange={onChange}
+                        value={values.password}
+                        />
 
                     <div>
                         <button type="submit">Login</button>
