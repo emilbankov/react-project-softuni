@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom"
 
-import { login } from "./services/authService.js";
+import { login, register } from "./services/authService.js";
 import AuthContext from "./contexts/AuthContext.js"
 
 import DefaultHeader from "./components/Default Header/DefaultHeader.jsx"
@@ -30,8 +30,11 @@ function App() {
         navigate('/')
     }
 
-    const registerHandler = async (values) => {
-        console.log(values);
+    const registerHandler = async ({ username, email, password }) => {
+        const result = await register(username, email, password);
+
+        setAuth(result);
+        navigate('/');
     }
 
     return (
