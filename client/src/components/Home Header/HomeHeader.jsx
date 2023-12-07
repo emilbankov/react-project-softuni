@@ -46,6 +46,9 @@ export default function HomeHeader() {
                                 <Link to="/about">About</Link>
                             </li>
                             <li className="hover-effect">
+                                <Link to="/logout">Logout</Link>
+                            </li>
+                            <li className="hover-effect">
                                 <Link to="/login">Login</Link>
                             </li>
                             <li className="hover-effect">

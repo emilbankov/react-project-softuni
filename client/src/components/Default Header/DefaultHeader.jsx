@@ -23,7 +23,7 @@ export default function DefaultHeader() {
 
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="hover-effect">
+                        <li className="hover-effect">
                                 <Link to="/">Home</Link>
                             </li>
                             <li className="hover-effect">
@@ -34,6 +34,9 @@ export default function DefaultHeader() {
                             </li>
                             <li className="hover-effect">
                                 <Link to="/about">About</Link>
+                            </li>
+                            <li className="hover-effect">
+                                <Link to="/logout">Logout</Link>
                             </li>
                             <li className="hover-effect">
                                 <Link to="/login">Login</Link>

@@ -12,11 +12,11 @@ import Login from "./components/Login/Login.jsx"
 import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
+import Logout from "./components/Logout/Logout.jsx"
 
 function App() {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-
+  const isHomePage = useLocation().pathname === '/';
+  
   return (
     <>
       {isHomePage ?
@@ -34,6 +34,7 @@ function App() {
         <Route path="/games/details" element={<Details />} />
         <Route path="/games/create" element={<AddGame />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to='/404' />} />
