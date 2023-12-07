@@ -4,8 +4,8 @@ import { useContext } from "react"
 import AuthContext from "../../contexts/AuthContext.js"
 
 export default function DefaultHeader() {
-    const { username } = useContext(AuthContext);
-    let isAuthenticated = !!username;
+    const { accessToken } = useContext(AuthContext);
+    let isAuthenticated = !!accessToken;
 
     return (
         <div className="sub-banner">

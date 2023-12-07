@@ -15,8 +15,8 @@ export default function HomeHeader() {
         });
     }, []);
 
-    const { username } = useContext(AuthContext);
-    let isAuthenticated = !!username;
+    const { accessToken } = useContext(AuthContext);
+    let isAuthenticated = !!accessToken;
 
     return (
         <div className="header">

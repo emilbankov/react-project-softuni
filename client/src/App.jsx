@@ -21,32 +21,44 @@ import Footer from "./components/Footer/Footer.jsx"
 function App() {
     const navigate = useNavigate();
     const isHomePage = useLocation().pathname === '/';
-    const [auth, setAuth] = useState();
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem("accessToken");
+
+        return {};
+    });
 
     const loginHandler = async ({ email, password }) => {
         const result = await login(email, password);
 
         setAuth(result);
-        navigate('/')
-    }
+        localStorage.setItem("accessToken", result.accessToken);
+        navigate("/")
+    };
 
     const registerHandler = async ({ username, email, password }) => {
         const result = await register(username, email, password);
 
         setAuth(result);
-        navigate('/');
-    }
+        localStorage.setItem("accessToken", result.accessToken);
+        navigate("/");
+    };
+
+    const logoutHandler = () => {
+        setAuth({});
+        localStorage.clear();
+        navigate("/");
+    };
 
     return (
         <>
-            <AuthContext.Provider value={{ loginHandler, registerHandler, ...auth }}>
+            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, ...auth }}>
                 {isHomePage ?
                     (
                         <HomeHeader />
                     ) : (
                         <DefaultHeader />
                     )
-                }
+                };
 
                 <Routes>
                     <Route path="/" element={<Home />} />
