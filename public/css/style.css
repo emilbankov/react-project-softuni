@@ -3629,32 +3629,62 @@ textarea#description {
 }
 
 .about-container {
-	width: 1270px;
+	background-color: #bebbbb;
+	padding: 20px 0;
 	margin: 20px auto;
 }
 
 .about-us-info {
+	width: 1270px;
 	position: relative;
-	height: 100vh;
+	height: 634px;
+	margin: 0 auto;
 }
 
 .about-top-left {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 200px;
-	height: 200px;
-	background-color: red;
+	width: 750px;
+	height: 400px;
+	background-color: black;
+	border: 5px solid white;
+	border-radius: 20px;
+	z-index: 1;
 }
 
 .about-bottom-right {
-	position: absolute;
+	position:absolute;
 	bottom: 0;
 	right: 0;
-	width: 200px;
-	height: 200px;
-	background-color: blue;
-	z-index: 1;
+	width: 750px;
+	height: 400px;
+	background-color: white;
+	border: 5px solid black;
+	border-radius: 20px;
+}
+
+.about-heading {
+	display: block;
+	font-size: 35px;
+	margin-top: 38px;
+	margin-left: 415px;
+	font-weight: bold;
+	width: 130px;
+}
+
+.about-sub-heading {
+	display: block;
+	margin-left: 344px;
+	font-size: 25px;
+	font-weight: bold;
+	width: 261px;
+}
+
+.about-bottom-right p {
+	margin: 0 20px;
+	margin-top: 40px;
+	margin-bottom: 10px;
 }
 
 .error {
