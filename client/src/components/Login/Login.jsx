@@ -7,8 +7,8 @@ import AuthContext from '../../contexts/AuthContext.js';
 export default function Login() {
     const { loginHandler } = useContext(AuthContext);
     const { values, onChange, onSubmit } = useForm(loginHandler, {
-        email: '',
-        password: ''
+        email: "",
+        password: ""
     });
 
     return (

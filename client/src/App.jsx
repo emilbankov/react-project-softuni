@@ -30,9 +30,13 @@ function App() {
         navigate('/')
     }
 
+    const registerHandler = async (values) => {
+        console.log(values);
+    }
+
     return (
         <>
-            <AuthContext.Provider value={{ loginHandler }}>
+            <AuthContext.Provider value={{ loginHandler, registerHandler, ...auth }}>
                 {isHomePage ?
                     (
                         <HomeHeader />

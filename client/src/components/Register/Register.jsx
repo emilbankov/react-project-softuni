@@ -1,57 +1,61 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import './Register.module.css'
 import { Link } from "react-router-dom";
+import AuthContext from "../../contexts/AuthContext.js";
+import useForm from "../../hooks/useForm.js";
 
 export default function Register() {
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-
-    const handleRegister = (e) => {
-        e.preventDefault();
-        // TODO
-    };
+    const { registerHandler } = useContext(AuthContext);
+    const {values, onChange, onSubmit} = useForm(registerHandler, {
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+    })
 
     return (
         <div className="register-page">
             <div className="register-container">
                 <h2>Sign Up</h2>
-                <form className="register-form" onSubmit={handleRegister}>
-                    <label htmlFor="register-username">Username:</label>
+                <form className="register-form" onSubmit={onSubmit}>
+                    <label htmlFor="username">Username:</label>
                     <input
                         type="text"
-                        id="register-username"
+                        id="username"
+                        name="username"
                         placeholder="Enter your username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        onChange={onChange}
+                        value={values.username}
                     />
 
-                    <label htmlFor="register-email">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input
                         type="email"
-                        id="register-email"
+                        id="email"
+                        name="email"
                         placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={onChange}
+                        value={values.email}
                     />
 
-                    <label htmlFor="register-password">Password:</label>
+                    <label htmlFor="password">Password:</label>
                     <input
                         type="password"
-                        id="register-password"
+                        id="password"
+                        name="password"
                         placeholder="Enter your password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={onChange}
+                        value={values.password}
                     />
 
-                    <label htmlFor="register-confirmPassword">Confirm Password:</label>
+                    <label htmlFor="confirmPassword">Confirm Password:</label>
                     <input
                         type="password"
-                        id="register-confirmPassword"
+                        id="confirmPassword"
+                        name="confirmPassword"
                         placeholder="Confirm your password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        onChange={onChange}
+                        value={values.confirmPassword}
                     />
 
                     <div>

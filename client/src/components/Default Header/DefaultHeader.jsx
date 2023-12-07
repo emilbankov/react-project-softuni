@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
 import styles from "./DefaultHeader.module.css"
+import { useContext } from "react"
+import AuthContext from "../../contexts/AuthContext.js"
 
 export default function DefaultHeader() {
+    const { username } = useContext(AuthContext);
+    let isAuthenticated = !!username;
+
     return (
         <div className="sub-banner">
             <nav className="navbar navbar-default">
@@ -23,27 +28,39 @@ export default function DefaultHeader() {
 
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav navbar-right">
-                        <li className="hover-effect">
+                            <li className="hover-effect">
                                 <Link to="/">Home</Link>
                             </li>
                             <li className="hover-effect">
                                 <Link to="/games/catalog">Games</Link>
                             </li>
-                            <li className="hover-effect">
-                                <Link to="/games/create">Add Game</Link>
-                            </li>
-                            <li className="hover-effect">
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li className="hover-effect">
-                                <Link to="/logout">Logout</Link>
-                            </li>
-                            <li className="hover-effect">
-                                <Link to="/login">Login</Link>
-                            </li>
-                            <li className="hover-effect">
-                                <Link to="/register">Register</Link>
-                            </li>
+
+                            {isAuthenticated ?
+                                (
+                                    <>
+                                        <li className="hover-effect">
+                                            <Link to="/games/create">Add Game</Link>
+                                        </li>
+                                        <li className="hover-effect">
+                                            <Link to="/about">About</Link>
+                                        </li>
+                                        <li className="hover-effect">
+                                            <Link to="/logout">Logout</Link>
+                                        </li>
+                                    </>
+                                ) : (
+                                    <>
+                                        <li className="hover-effect">
+                                            <Link to="/about">About</Link>
+                                        </li>
+                                        <li className="hover-effect">
+                                            <Link to="/login">Login</Link>
+                                        </li>
+                                        <li className="hover-effect">
+                                            <Link to="/register">Register</Link>
+                                        </li>
+                                    </>
+                                )}
                         </ul>
                     </div>
 
