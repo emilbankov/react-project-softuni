@@ -12,37 +12,46 @@ import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Logout from "./components/Logout/Logout.jsx"
+import { useState } from "react"
+import AuthContext from "./contexts/authContext.js"
 
 function App() {
-  const isHomePage = useLocation().pathname === '/';
-  
-  return (
-    <>
-      {isHomePage ?
-        (
-          <HomeHeader />
-        ) : (
-          <DefaultHeader />
-        )
-      }
+    const isHomePage = useLocation().pathname === '/';
+    const [auth, setAuth] = useState();
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/games/catalog" element={<Catalog />} />
-        <Route path="/games/details" element={<Details />} />
-        <Route path="/games/create" element={<AddGame />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/404" element={<Error />} />
-        <Route path="*" element={<Navigate to='/404' />} />
-      </Routes>
+    const loginHandler = (values) => {
+        console.log(values);
+    }
 
-      <Footer />
-    </>
+    return (
+        <>
+            <AuthContext.Provider value={{ loginHandler }}>
+                {isHomePage ?
+                    (
+                        <HomeHeader />
+                    ) : (
+                        <DefaultHeader />
+                    )
+                }
 
-  )
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/games/catalog" element={<Catalog />} />
+                    <Route path="/games/details" element={<Details />} />
+                    <Route path="/games/create" element={<AddGame />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/logout" element={<Logout />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/404" element={<Error />} />
+                    <Route path="*" element={<Navigate to='/404' />} />
+                </Routes>
+
+                <Footer />
+            </AuthContext.Provider>
+        </>
+
+    )
 }
 
 export default App

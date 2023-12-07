@@ -1,23 +1,15 @@
-import { useState } from "react";
 import './Login.module.css';
 import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm.js";
+import { useContext } from 'react';
+import authContext from '../../contexts/authContext.js';
 
 export default function Login() {
-    const { values, onChange, onSubmit } = useForm({
+    const { loginHandler } = useContext(authContext);
+    const { values, onChange, onSubmit } = useForm(loginHandler, {
         email: '',
         password: ''
     });
-
-
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        // TODO
-
-    };
 
     return (
         <div className="login-page">
@@ -28,6 +20,7 @@ export default function Login() {
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         placeholder="Enter your email"
                         onChange={onChange}
                         value={values.email}
@@ -37,14 +30,15 @@ export default function Login() {
                     <input
                         type="password"
                         id="password"
+                        name="password"
                         placeholder="Enter your password"
                         onChange={onChange}
                         value={values.password}
-                        />
+                    />
 
                     <div>
                         <button type="submit">Login</button>
-                        <Link  to="/register">Don't have an account?</Link>
+                        <Link to="/register">Don't have an account?</Link>
                     </div>
 
                 </form>
