@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Search from "../Search/Search.jsx";
-import Card from "./Card/Card.jsx";
+import Card from "./Catalog Item/Card.jsx";
 import * as gameService from "../../services/gamesService.js";
 
 export default function Catalog() {
-    const [games, setGames] = useState();
+    const [games, setGames] = useState([]);
 
     useEffect(() => {
         gameService.getAll()
@@ -13,7 +13,6 @@ export default function Catalog() {
                 console.log(err);
             });
     }, []);
-
 
     return (
         <>
@@ -24,19 +23,20 @@ export default function Catalog() {
 
             <Search />
 
-            <div className="grid-container">
+            {games.length > 0 ?
+                (<div className="grid-container">
 
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                    {games.map(game => (
+                        <Card key={game._id} {...game} />
+                    ))}
 
-            </div>
+                </div>)
+                :
+
+                (<div className="no-games">
+                    <h1>There are no games added yet</h1>
+                </div>)
+            }
         </>
     )
 }

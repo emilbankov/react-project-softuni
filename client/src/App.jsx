@@ -64,7 +64,7 @@ function App() {
                     ) : (
                         <DefaultHeader />
                     )
-                };
+                }
 
                 <Routes>
                     <Route path="/" element={<Home />} />
