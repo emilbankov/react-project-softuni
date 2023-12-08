@@ -2,12 +2,8 @@ import { get, post, put, del } from '../lib/request.js';
 
 const baseUrl = 'http://localhost:3030/data/games';
 
-export const getAll = async () => {
-    const result = await get(baseUrl);
-
-    return result;
-}
-
+export const getAll = async () => await get(baseUrl);
+  
 export const getOne = async (gameId) => {
     const result = await get(`${baseUrl}/${gameId}`,);
 

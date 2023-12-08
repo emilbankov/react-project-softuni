@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Card() {
     let price = "119,99";
+
+    
     let [dollars, cents] = price.split(",");
 
     return (

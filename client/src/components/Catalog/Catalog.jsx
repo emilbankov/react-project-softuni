@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import Search from "../Search/Search.jsx";
-import Card from "../Card/Card.jsx";
+import Card from "./Card/Card.jsx";
+import * as gameService from "../../services/gamesService.js";
 
 export default function Catalog() {
+    const [games, setGames] = useState();
+
+    useEffect(() => {
+        gameService.getAll()
+            .then(result => setGames(result))
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
+
     return (
         <>
             <div className="catalog-header">
@@ -12,7 +25,7 @@ export default function Catalog() {
             <Search />
 
             <div className="grid-container">
-                
+
                 <Card />
                 <Card />
                 <Card />
@@ -22,7 +35,7 @@ export default function Catalog() {
                 <Card />
                 <Card />
                 <Card />
-                
+
             </div>
         </>
     )
