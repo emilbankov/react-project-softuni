@@ -17,6 +17,7 @@ import Logout from "./components/Logout/Logout.jsx"
 import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
+import { create } from "./services/gamesService.js";
 
 function App() {
     const navigate = useNavigate();
@@ -49,9 +50,14 @@ function App() {
         navigate("/");
     };
 
+    const createGameHandler = async ({ title, imageUrl, genre, developer, players, price, description }) => {
+        await create(title, imageUrl, genre, developer, players, price, description);
+        navigate("/games/catalog");
+    }
+
     return (
         <>
-            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, ...auth }}>
+            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, createGameHandler, ...auth }}>
                 {isHomePage ?
                     (
                         <HomeHeader />

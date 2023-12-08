@@ -67,7 +67,7 @@ export default function EditGame() {
 
                     <label htmlFor="price">Price:</label>
                     <input
-                        type="text"
+                        type="number"
                         id="price"
                         placeholder="Enter game price"
                         value={price}
