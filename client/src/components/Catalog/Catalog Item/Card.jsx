@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Card({
+    _id,
     title,
     imageUrl,
     genre,
@@ -9,7 +10,7 @@ export default function Card({
     let [dollars, cents] = price.split(",");
 
     return (
-        <Link to={'/games/details'}>
+        <Link to={`/games/details/${_id}`}>
             <div className="card-container">
                 <div className="card-image-container">
                     <img src={imageUrl} alt="Card" className="card-image" />

@@ -3,12 +3,7 @@ import { get, post, put, del } from '../lib/request.js';
 const baseUrl = 'http://localhost:3030/data/games';
 
 export const getAll = async () => await get(baseUrl);
-  
-export const getOne = async (gameId) => {
-    const result = await get(`${baseUrl}/${gameId}`,);
-
-    return result;
-}
+export const getOne = async (gameId) => await get(`${baseUrl}/${gameId}`);
 
 export const getLatest = async () => {
     const query = encodeURIComponent(`offset=0&pageSize=3`);
@@ -27,8 +22,6 @@ export const create = (title, imageUrl, genre, developer, players, price, descri
     price,
     description
 });
-
-
 
 export const edit = async (gameId, gameData) => {
     const result = await put(`${baseUrl}/${gameId}`, gameData);

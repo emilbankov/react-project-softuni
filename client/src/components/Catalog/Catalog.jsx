@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import Search from "../Search/Search.jsx";
 import Card from "./Catalog Item/Card.jsx";
-import * as gameService from "../../services/gamesService.js";
+import * as gamesService from "../../services/gamesService.js";
 
 export default function Catalog() {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        gameService.getAll()
+        gamesService.getAll()
             .then(result => setGames(result))
             .catch(err => {
                 console.log(err);

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom"
 
 import { login, register } from "./services/authService.js";
+import * as gamesService from "./services/gamesService.js";
 import AuthContext from "./contexts/AuthContext.js"
 
 import DefaultHeader from "./components/Default Header/DefaultHeader.jsx"
@@ -17,9 +18,8 @@ import Logout from "./components/Logout/Logout.jsx"
 import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
-import { create } from "./services/gamesService.js";
 
-function App() {
+export default function App() {
     const navigate = useNavigate();
     const isHomePage = useLocation().pathname === '/';
     const [auth, setAuth] = useState(() => {
@@ -51,7 +51,7 @@ function App() {
     };
 
     const createGameHandler = async ({ title, imageUrl, genre, developer, players, price, description }) => {
-        await create(title, imageUrl, genre, developer, players, price, description);
+        await gamesService.create(title, imageUrl, genre, developer, players, price, description);
         navigate("/games/catalog");
     }
 
@@ -70,7 +70,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/games/catalog" element={<Catalog />} />
-                    <Route path="/games/details" element={<Details />} />
+                    <Route path="/games/details/:gameId" element={<Details />} />
                     <Route path="/games/create" element={<AddGame />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/logout" element={<Logout />} />
@@ -85,5 +85,3 @@ function App() {
 
     )
 }
-
-export default App
