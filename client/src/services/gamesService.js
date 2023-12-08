@@ -1,0 +1,43 @@
+import { get, post, put, del } from '../lib/request.js';
+
+const baseUrl = 'http://localhost:3030/data/games';
+
+export const getAll = async () => {
+    const result = await get(baseUrl);
+
+    return result;
+}
+
+export const getOne = async (gameId) => {
+    const result = await get(`${baseUrl}/${gameId}`,);
+
+    return result;
+}
+
+export const getLatest = async () => {
+    const query = encodeURIComponent(`offset=0&pageSize=3`);
+    console.log(query);
+    const result = await get(`${baseUrl}?sortBy=_createdOn%20desc&${query}`);
+
+    return result;
+}
+
+export const create = (title, imageUrl, genre, developer, players, price, description) => post(baseUrl, {
+    title,
+    imageUrl,
+    genre,
+    developer,
+    players,
+    price,
+    description
+});
+
+
+
+export const edit = async (gameId, gameData) => {
+    const result = await put(`${baseUrl}/${gameId}`, gameData);
+
+    return result;
+};
+
+export const remove = async (gameId) => await remove(`${baseUrl}/${gameId}`);
