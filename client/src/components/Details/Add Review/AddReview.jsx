@@ -3,19 +3,17 @@ import * as reviewsService from '../../../services/reviewsService.js';
 
 export default function AddReview() {
     const { gameId } = useParams();
-    
+
     const addReviewHandler = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
 
-        const newComment = await reviewsService.create(
+        await reviewsService.create(
             gameId,
             formData.get('title'),
             formData.get('review')
         );
-
-        console.log(newComment);
     }
 
     return (

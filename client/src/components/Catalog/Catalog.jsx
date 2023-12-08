@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Search from "../Search/Search.jsx";
-import Card from "./Catalog Item/Card.jsx";
+import Card from "./Card/Card.jsx";
 import * as gamesService from "../../services/gamesService.js";
 
 export default function Catalog() {

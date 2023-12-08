@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as gamesService from '../../services/gamesService.js';
+import * as reviewsService from '../../services/reviewsService.js';
 import AddReview from './Add Review/AddReview.jsx';
+import Review from './Review/Review.jsx';
 
 export default function Details() {
-    const [game, setGame] = useState({
-        price: ""
-    });
+    const [game, setGame] = useState({ price: "" });
+    const [reviews, setReviews] = useState([]);
     const { gameId } = useParams();
-    const navigate = useNavigate()
+
     useEffect(() => {
         gamesService.getOne(gameId)
             .then(setGame);
 
-        navigate(`/games/details/${gameId}`, { state: { gameId } })
-    }, [navigate, gameId])
+        reviewsService.getAll()
+            .then(setReviews)
+
+    }, [gameId]);
 
     let [dollars, cents] = game.price.split(",");
 
@@ -63,26 +66,13 @@ export default function Details() {
 
             <div id="reviews" className="reviews-section">
                 <span className='reviews-title'>Reviews</span>
+
                 <div className="review-items">
-                    <div className="review-item">
-                        <div className="review-author">
-                            <div className="author-banner">
-                                V
-                            </div>
-                            <div className="author-username">
-                                venom
-                            </div>
-                        </div>
-                        <div className="review-content">
-                            <div className="review-title">
-                                One of the best games
-                            </div>
-                            <div className="review-text">
-                                Spider-Man 2 is an absolute thrill ride from start to finish! The web-swinging mechanics make traversing New York City a joy, and the dynamic duo of Peter Parker and Miles Morales adds depth to the storyline. The graphics are stunning, and the attention to detail in recreating Marvel's universe is impressive. Whether you're a fan of the comics or new to the Spider-Man world, this game delivers an unforgettable experience filled with action, emotion, and an abundance of web-slinging fun!
-                            </div>
-                        </div>
-                    </div>
+                    {reviews.map(review => (
+                        <Review key={review._id} {...review} />
+                    ))}
                 </div>
+
                 <AddReview />
             </div>
         </div>
