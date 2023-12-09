@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import * as gamesService from '../../services/gamesService.js';
 import * as reviewsService from '../../services/reviewsService.js';
 import Review from './Review/Review.jsx';
 import AuthContext from '../../contexts/AuthContext.js';
+import useForm from '../../hooks/useForm.js';
 
 export default function Details() {
+    const navigate = useNavigate();
     const { username, _id } = useContext(AuthContext);
     const [game, setGame] = useState({ price: "" });
     const [reviews, setReviews] = useState([]);
@@ -21,19 +23,33 @@ export default function Details() {
 
     }, [gameId]);
 
-    const addReviewHandler = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(e.currentTarget);
+    const addReviewHandler = async (values) => {
         const newReview = await reviewsService.create(
             gameId,
-            formData.get('title'),
-            formData.get('review')
+            values.title,
+            values.review
         );
 
         setReviews(state => [...state, { ...newReview, owner: { username } }]);
+        values.title = "";
+        values.review = "";
     }
-    console.log(_id);
+
+    const {values, onChange, onSubmit} = useForm(addReviewHandler, {
+        title: "",
+        review: ""
+    });
+
+    const deleteHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${game.title}`);
+
+        if (hasConfirmed) {
+            await gamesService.deleteGame(gameId);
+            
+            navigate("/games/catalog");
+        }
+    }
+
     return (
         <div className="details-contaier">
             <div className="details-product">
@@ -75,8 +91,8 @@ export default function Details() {
 
                     {_id === game._ownerId && (
                         <div className="buttons">
-                            <Link to={"/"} className="button">Edit</Link>
-                            <button className="button" >Delete</button>
+                            <Link to={"/"} className="edit">Edit</Link>
+                            <button className="delete" onClick={deleteHandler}>Delete</button>
                         </div>
                     )}
                 </div>
@@ -102,13 +118,15 @@ export default function Details() {
                 <div className="add-review">
                     <span className='add-review-title' id='add-review-title'>Add your review</span>
 
-                    <form onSubmit={addReviewHandler}>
+                    <form onSubmit={onSubmit}>
                         <label htmlFor="title">Title:</label>
                         <input
                             type="text"
                             id="title"
                             name="title"
                             placeholder="Enter review title"
+                            value={values.title}
+                            onChange={onChange}
                         />
 
                         <label htmlFor="review">Review:</label>
@@ -117,6 +135,8 @@ export default function Details() {
                             id="review"
                             name="review"
                             placeholder="Enter your review"
+                            value={values.review}
+                            onChange={onChange}
                         />
                         <button type="submit">Add Review</button>
                     </form>
