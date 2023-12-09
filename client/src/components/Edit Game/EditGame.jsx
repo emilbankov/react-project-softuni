@@ -1,85 +1,120 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './EditGame.module.css'
-
+import { useNavigate, useParams } from 'react-router-dom';
+import * as gameService from '../../services/gamesService.js'
 export default function EditGame() {
-    const [title, setTitle] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
-    const [genre, setGenre] = useState('');
-    const [developer, setDeveloper] = useState('');
-    const [players, setPlayers] = useState('');
-    const [price, setPrice] = useState('');
-    const [description, setDescription] = useState('');
+    const navigate = useNavigate();
+    const { gameId } = useParams();
+    const [game, setGame] = useState({
+        title: "",
+        imageUrl: "",
+        genre: "",
+        developer: "",
+        players: "",
+        price: "",
+        description: ""
+    });
 
-    const handleAddGame = (e) => {
+    useEffect(() => {
+        gameService.getOne(gameId)
+            .then(result => {
+                setGame(result);
+            });
+    }, [gameId]);
+
+    const editGameSubmitHandler = async (e) => {
         e.preventDefault();
-        // TODO
+
+        const values = Object.fromEntries(new FormData(e.currentTarget));
+
+        try {
+            await gameService.edit(gameId, values);
+
+            navigate(`/games/details/${gameId}`);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    const onChange = (e) => {
+        setGame(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
     };
 
     return (
         <div className="edit-game-page">
             <div className="edit-game-container">
                 <h2>Edit Game</h2>
-                <form className="edit-game-form" onSubmit={handleAddGame}>
+                <form className="edit-game-form" onSubmit={editGameSubmitHandler}>
                     <label htmlFor="title">Title:</label>
                     <input
                         type="text"
                         id="title"
+                        name='title'
                         placeholder="Enter game title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        value={game.title}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="imageUrl">Image URL:</label>
                     <input
                         type="text"
                         id="imageUrl"
+                        name='imageUrl'
                         placeholder="Enter game image URL"
-                        value={imageUrl}
-                        onChange={(e) => setImageUrl(e.target.value)}
+                        value={game.imageUrl}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="genre">Genre:</label>
                     <input
                         type="text"
                         id="genre"
+                        name='genre'
                         placeholder="Enter game genre"
-                        value={genre}
-                        onChange={(e) => setGenre(e.target.value)}
+                        value={game.genre}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="developer">Developer:</label>
                     <input
                         type="text"
                         id="developer"
+                        name='developer'
                         placeholder="Enter game developer"
-                        value={developer}
-                        onChange={(e) => setDeveloper(e.target.value)}
+                        value={game.developer}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="players">Players:</label>
                     <input
                         type="number"
                         id="players"
+                        name='players'
                         placeholder="Enter players count"
-                        value={players}
-                        onChange={(e) => setPlayers(e.target.value)}
+                        value={game.players}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="price">Price:</label>
                     <input
-                        type="number"
+                        type="text"
                         id="price"
+                        name='price'
                         placeholder="Enter game price"
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
+                        value={game.price}
+                        onChange={onChange}
                     />
 
                     <label htmlFor="description">Description:</label>
                     <textarea
                         id="description"
+                        name='description'
                         placeholder="Enter game description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
+                        value={game.description}
+                        onChange={onChange}
                     ></textarea>
 
                     <button type="submit">Edit Game</button>

@@ -78,6 +78,7 @@ export default function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/games/catalog" element={<Catalog />} />
                     <Route path="/games/details/:gameId" element={<Details />} />
+                    <Route path="/games/edit/:gameId" element={<EditGame />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/logout" element={<Logout />} />
                     <Route path="/register" element={<Register />} />
