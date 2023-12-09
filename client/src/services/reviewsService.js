@@ -2,21 +2,15 @@ import { get, post } from '../lib/request';
 
 const baseUrl = 'http://localhost:3030/data/reviews';
 
-// export const getAll = async (gameId) => {
-//     const query = new URLSearchParams({
-//         where: `gameId="${gameId}"`,
-//         load: `owner=_ownerId:users`,
-//     });
+export const getAll = async (gameId) => {
+    const query = new URLSearchParams({
+        where: `gameId="${gameId}"`,
+        load: `owner=_ownerId:users`,
+    });
 
-//     const result = await get(`${baseUrl}?${query}`);
+    const result = await get(`${baseUrl}?${query}`);
 
-//     return result;
-// };
-
-export const getAll = async () => {
-    const result = await get(baseUrl);
-
-    return Object.values(result);
+    return result;
 };
 
 export const create = async (gameId, title, review) => await post(baseUrl, {

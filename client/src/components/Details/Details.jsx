@@ -1,30 +1,42 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import * as gamesService from '../../services/gamesService.js';
 import * as reviewsService from '../../services/reviewsService.js';
-import AddReview from './Add Review/AddReview.jsx';
 import Review from './Review/Review.jsx';
+import AuthContext from '../../contexts/AuthContext.js';
 
 export default function Details() {
+    const { username, _id } = useContext(AuthContext);
     const [game, setGame] = useState({ price: "" });
     const [reviews, setReviews] = useState([]);
     const { gameId } = useParams();
+    const [dollars, cents] = game.price.split(",");
 
     useEffect(() => {
         gamesService.getOne(gameId)
             .then(setGame);
 
-        reviewsService.getAll()
+        reviewsService.getAll(gameId)
             .then(setReviews)
 
     }, [gameId]);
 
-    let [dollars, cents] = game.price.split(",");
+    const addReviewHandler = async (e) => {
+        e.preventDefault();
 
+        const formData = new FormData(e.currentTarget);
+        const newReview = await reviewsService.create(
+            gameId,
+            formData.get('title'),
+            formData.get('review')
+        );
+
+        setReviews(state => [...state, { ...newReview, owner: { username } }]);
+    }
+    console.log(_id);
     return (
         <div className="details-contaier">
             <div className="details-product">
-
                 <div className="details-image">
                     <img src={game.imageUrl} />
                 </div>
@@ -60,20 +72,55 @@ export default function Details() {
                     <div className="details-links">
                         <a href="#add-review-title"><img src="../../images/review-bubble.png" alt="" /> Add review</a>
                     </div>
+
+                    {_id === game._ownerId && (
+                        <div className="buttons">
+                            <Link to={"/"} className="button">Edit</Link>
+                            <button className="button" >Delete</button>
+                        </div>
+                    )}
                 </div>
             </div>
-
 
             <div id="reviews" className="reviews-section">
                 <span className='reviews-title'>Reviews</span>
 
-                <div className="review-items">
-                    {reviews.map(review => (
-                        <Review key={review._id} {...review} />
-                    ))}
-                </div>
+                {reviews.length > 0 ?
+                    (
+                        <div className="review-items">
+                            {reviews.map(review => (
+                                <Review key={review._id} {...review} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className='no-reviews'>
+                            <span className="reviews-title">There are no reviews added for this game yet.</span>
+                        </div>
+                    )
+                }
 
-                <AddReview />
+                <div className="add-review">
+                    <span className='add-review-title' id='add-review-title'>Add your review</span>
+
+                    <form onSubmit={addReviewHandler}>
+                        <label htmlFor="title">Title:</label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Enter review title"
+                        />
+
+                        <label htmlFor="review">Review:</label>
+                        <input
+                            type="text"
+                            id="review"
+                            name="review"
+                            placeholder="Enter your review"
+                        />
+                        <button type="submit">Add Review</button>
+                    </form>
+                </div>
             </div>
         </div>
     );

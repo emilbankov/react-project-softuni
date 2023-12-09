@@ -1,15 +1,20 @@
 export default function Review({
     title,
-    review
+    review,
+    owner
 }) {
+
+    const { username } = owner;
+    const letter = username.split("")[0].toUpperCase();
+
     return (
         <div className="review-item">
             <div className="review-author">
                 <div className="author-banner">
-                    V
+                    {letter}
                 </div>
                 <div className="author-username">
-                    venom
+                    {username}
                 </div>
             </div>
             <div className="review-content">
