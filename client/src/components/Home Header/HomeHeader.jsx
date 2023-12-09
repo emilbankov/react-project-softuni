@@ -4,6 +4,9 @@ import { useContext, useEffect } from "react"
 import AuthContext from "../../contexts/AuthContext.js";
 
 export default function HomeHeader() {
+    const { accessToken } = useContext(AuthContext);
+    const isAuthenticated = !!accessToken;
+
     useEffect(() => {
         $("#slider").responsiveSlides({
             auto: true,
@@ -14,9 +17,6 @@ export default function HomeHeader() {
             pager: true,
         });
     }, []);
-
-    const { accessToken } = useContext(AuthContext);
-    let isAuthenticated = !!accessToken;
 
     return (
         <div className="header">

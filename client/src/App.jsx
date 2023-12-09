@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom"
+import { useContext, useState } from "react"
+import { Routes, Route, useLocation, Navigate, useNavigate, useParams } from "react-router-dom"
 
 import { login, register } from "./services/authService.js";
 import * as gamesService from "./services/gamesService.js";
@@ -18,10 +18,12 @@ import Logout from "./components/Logout/Logout.jsx"
 import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
+import RouteGuard from "./components/Guards/RouteGuard.jsx";
 
 export default function App() {
     const navigate = useNavigate();
     const isHomePage = useLocation().pathname === '/';
+    const [errorFromServer, setErrorFromServer] = useState({});
     const [auth, setAuth] = useState(() => {
         localStorage.removeItem("accessToken");
 
@@ -37,16 +39,21 @@ export default function App() {
     };
 
     const registerHandler = async ({ username, email, password }) => {
-        const result = await register(username, email, password);
-
-        setAuth(result);
-        localStorage.setItem("accessToken", result.accessToken);
-        navigate("/");
+        try {
+            const result = await register(username, email, password);
+            setAuth(result);
+            localStorage.setItem("accessToken", result.accessToken);
+            navigate("/");
+            setErrorFromServer({});
+        } catch (err) {
+            setErrorFromServer(err)
+        }
     };
 
     const logoutHandler = () => {
         setAuth({});
         localStorage.clear();
+
         navigate("/");
     };
 
@@ -57,7 +64,7 @@ export default function App() {
 
     return (
         <>
-            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, createGameHandler, ...auth }}>
+            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, createGameHandler, errorFromServer, ...auth }}>
                 {isHomePage ?
                     (
                         <HomeHeader />
@@ -71,12 +78,15 @@ export default function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/games/catalog" element={<Catalog />} />
                     <Route path="/games/details/:gameId" element={<Details />} />
-                    <Route path="/games/create" element={<AddGame />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/logout" element={<Logout />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/404" element={<Error />} />
                     <Route path="*" element={<Navigate to='/404' />} />
+
+                    <Route element={<RouteGuard />}>
+                        <Route path="/games/create" element={<AddGame />} />
+                    </Route>
                 </Routes>
 
                 <Footer />

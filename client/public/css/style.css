@@ -3654,7 +3654,7 @@ textarea#description {
 }
 
 .about-bottom-right {
-	position:absolute;
+	position: absolute;
 	bottom: 0;
 	right: 0;
 	width: 750px;
@@ -3738,6 +3738,18 @@ textarea#description {
 	margin-top: 215px;
 	margin-bottom: 215px;
 	height: 40px;
+}
+
+.no-reviews {
+	width: 1226px;
+	height: 142px;
+	margin-bottom: 10px;
+
+}
+
+.no-reviews span {
+	padding-top: 52px;
+	margin: 0 0;
 }
 
 .card-container {
@@ -4090,3 +4102,20 @@ textarea#description {
 .search-container input {
 	border-right: none;
 }
+
+.error-msg {
+    margin-top: 5px; /* Adjust the margin to your preference */
+    font-size: 12px; /* Adjust the font size to your preference */
+    color: black; /* Set the color to red or any color you prefer */
+    text-align: center; /* Align the error message to the center */
+    width: max-content;
+    padding: 8px;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+    white-space: nowrap;
+    z-index: 1;
+    display: flex; /* Align the text within the bubble */
+    align-items: center; /* Center the text vertically */
+}
+

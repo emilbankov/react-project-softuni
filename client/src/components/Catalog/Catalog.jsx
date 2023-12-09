@@ -24,18 +24,19 @@ export default function Catalog() {
             <Search />
 
             {games.length > 0 ?
-                (<div className="grid-container">
+                (
+                    <div className="grid-container">
 
-                    {games.map(game => (
-                        <Card key={game._id} {...game} />
-                    ))}
+                        {games.map(game => (
+                            <Card key={game._id} {...game} />
+                        ))}
 
-                </div>)
-                :
-
-                (<div className="no-games">
-                    <h1>There are no games added yet</h1>
-                </div>)
+                    </div>
+                ) : (
+                    <div className="no-games">
+                        <h1>There are no games added yet.</h1>
+                    </div>
+                )
             }
         </>
     )
