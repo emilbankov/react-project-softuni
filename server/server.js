@@ -1353,64 +1353,154 @@
                 _createdOn: 1702046439154,
                 _id: "63ca85c8-d000-4172-b469-f61d6de55fbc"
             },
-            "63ca85c8-d000-4172-b469-f61d6de55fbcasd": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Marvel's Spider-Man 2 (PS5)",
-                imageUrl: "https://m.media-amazon.com/images/I/81VGpLvXQuL._AC_UF1000,1000_QL80_.jpg",
-                genre: "Action",
+            "b745d90a-226d-4a78-8c03-72fe09b5edfb": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Marvel's Spider-Man: Miles Morales (PS5)",
+                imageUrl: "https://m.media-amazon.com/images/I/71CqfmZX3PL._AC_UF1000,1000_QL80_.jpg",
+                genre: "Action-adventure",
                 developer: "Insomniac Games",
                 players: "1",
-                price: "119,99",
-                description: " Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.\n",
-                _createdOn: 1702046439154,
-                _id: "63ca85c8-d000-4172-b469-f61d6de55fbcasd"
+                price: "79,99",
+                description: "In the latest adventure in the Marvel’s Spider-Man universe, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. But when a fierce power struggle threatens to destroy his new home, the aspiring hero realizes that with great power, there must also come great responsibility. To save all of Marvel’s New York, Miles must take up the mantle of Spider-Man and own it. ",
+                _createdOn: 1702192557355,
+                _id: "b745d90a-226d-4a78-8c03-72fe09b5edfb"
             },
-            "63ca85c8-d000-4172-b469-f61d6de55fbcasdwe": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Marvel's Spider-Man 2 (PS5)",
-                imageUrl: "https://m.media-amazon.com/images/I/81VGpLvXQuL._AC_UF1000,1000_QL80_.jpg",
+            "f4f1bb3d-1e33-4467-a195-ac782551eeb5": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Grand Theft Auto V (PS5)",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/t/00b6b1e95106afe172213c54649092ad/grand-theft-auto-v-ps5-30.jpg",
                 genre: "Action",
-                developer: "Insomniac Games",
+                developer: "Rockstar Games",
                 players: "1",
-                price: "119,99",
-                description: " Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.\n",
-                _createdOn: 1702046439154,
-                _id: "63ca85c8-d000-4172-b469-f61d6de55fbcasdwe"
+                price: "99,99",
+                description: "When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other. Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, where you can rise from street-level hustler to become a kingpin of your own criminal empire.",
+                _createdOn: 1702192710443,
+                _id: "f4f1bb3d-1e33-4467-a195-ac782551eeb5"
             },
-            "63ca85c8-d000-4172-b469-f61d6de55fbcasd12": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Marvel's Spider-Man 2 (PS5)",
-                imageUrl: "https://m.media-amazon.com/images/I/81VGpLvXQuL._AC_UF1000,1000_QL80_.jpg",
-                genre: "Action",
+            "7e125994-d35e-412d-a5a6-7eea08389d1e": {
+                title: "Ratchet & Clank: Rift Apart (PS5)",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/a4e40ebdc3e371adff845072e1c73f37/r/a/63c90d4ffc57ca75891eba7ca1dd9332/ratchet-and-clank--rift-apart-ps5-30.jpg",
+                genre: "Shooter Video Game",
                 developer: "Insomniac Games",
                 players: "1",
-                price: "119,99",
-                description: " Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.\n",
-                _createdOn: 1702046439154,
-                _id: "63ca85c8-d000-4172-b469-f61d6de55fbcasd12"
+                price: "49,99",
+                description: "Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality. Jump between action-packed worlds and beyond at mind-blowing speeds – complete with dazzling visuals and an insane arsenal – as the intergalactic adventurers blast onto the PS5™ console. Play as Ratchet and as the mysterious new female Lombax from another dimension. ",
+                _createdOn: 1702193030964,
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                _updatedOn: 1702193097649,
+                _id: "7e125994-d35e-412d-a5a6-7eea08389d1e"
             },
-            "63ca85c8-d000-4172-b469-f61d6de55fbcasd51": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Marvel's Spider-Man 2 (PS5)",
-                imageUrl: "https://m.media-amazon.com/images/I/81VGpLvXQuL._AC_UF1000,1000_QL80_.jpg",
-                genre: "Action",
-                developer: "Insomniac Games",
+            "62f2c3a1-3686-44bd-aad7-99d5495847b7": {
+                title: "EA Sports FC 24 (PS5)",
+                imageUrl: "https://www.billboard.com/wp-content/uploads/2023/09/ea-sports-fc-24-box-art.jpg?w=811",
+                genre: "Sports",
+                developer: "Electronic Arts",
                 players: "1",
-                price: "119,99",
-                description: " Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5. Swing, jump and utilize the new Web Wings to travel across Marvel's New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers, as the iconic villain Venom threatens to destroy their lives, their city and the ones they love.\n",
-                _createdOn: 1702046439154,
-                _id: "63ca85c8-d000-4172-b469-f61d6de55fbc51"
+                price: "89,99",
+                description: "EA SPORTS FC™ 24 is a new era for The World’s Game: 19,000+ fully licensed players, 700+ teams, and 30+ leagues playing together in the most authentic football experience ever created. Develop club legends and improve your players with the brand new Ultimate Team™ Evolutions, and welcome women’s footballers to the pitch alongside men as you craft your dream XI.\nWrite your own story in Manager and Player Career, and join friends on the pitch with cross-play*** in Clubs and VOLTA FOOTBALL™.",
+                _createdOn: 1702193505718,
+                _updatedOn: 1702193686234,
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _id: "62f2c3a1-3686-44bd-aad7-99d5495847b7"
+            },
+            "4b459343-83d0-4a6c-ac80-7796254c7895": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Hogwarts Legacy (PS5)",
+                imageUrl: "https://s3-ap-southeast-1.amazonaws.com/qisahn-upgrade-production/public/spree/products/33157/large/PS5-Hogwarts-Legacy.jpg?1670303862",
+                genre: "Action-adventure",
+                developer: "Avalanche Software",
+                players: "1",
+                price: "65,99",
+                description: "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.  Embark on a journey through familiar and new locations as you explore and discover magical beasts, customize your character and craft potions, master spell casting, upgrade talents and become the wizard you want to be.",
+                _createdOn: 1702193843928,
+                _id: "4b459343-83d0-4a6c-ac80-7796254c7895"
+            },
+            "4b7b823d-352e-472c-82f1-b0e215f72c75": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Sackboy: A Big Adventure (PS5)",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/400x498/a4e40ebdc3e371adff845072e1c73f37/s/a/428b1f4a01ad5731a43f15c62ab5820d/sackboy--a-big-adventure-ps5-31.png",
+                genre: "Kids Game",
+                developer: "Sumo Digital",
+                players: "1",
+                price: "32,99",
+                description: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure – and a whole new edgy sackitude! And here’s what’s going down: The dastardly Vex (a near-mythical being born of chaos and fear, no less) kidnaps Sackboy’s friends and forces them to build his Topsy Turver.  This most deadly diabolical device will transform Craftworld from a fantastical land of pure imagination and innocent dreams… into a torrid, barren eyesore of nightmares. Ooh the fiend!",
+                _createdOn: 1702194259151,
+                _id: "4b7b823d-352e-472c-82f1-b0e215f72c75"
+            },
+            "92388d97-d1a5-4da3-b30c-0055426cf319": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "The Last of Us Part II Remastered (PS5)",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/400x498/a4e40ebdc3e371adff845072e1c73f37/t/h/795fbda089a547d2794995d82ff4f5b4/the-last-of-us-part-ii-remastered-ps5-30.jpg",
+                genre: "Third Person",
+                developer: "Naughty Dog",
+                players: "1",
+                price: "66,99",
+                description: "Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors. When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure.",
+                _createdOn: 1702194432046,
+                _id: "92388d97-d1a5-4da3-b30c-0055426cf319"
+            },
+            "ee9278c4-17f7-4ac1-877b-606bc2e8a9b1": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Avatar: Frontiers of Pandora",
+                imageUrl: "https://cdn.ozone.bg/media/catalog/product/cache/1/image/400x498/a4e40ebdc3e371adff845072e1c73f37/a/v/c5e8d32370af00bf4e2251a4b25abc87/avatar--frontiers-of-pandora---special-edition-ps5-30.jpg",
+                genre: "Adventure",
+                developer: "Massive Entertainment",
+                players: "1",
+                price: "140,00",
+                description: "Avatar: Frontiers of Pandora™ is a first-person, action-adventure game set in the open world of the never-before-seen Western Frontier of Pandora. Abducted by the human militaristic corporation known as the RDA, you, a Na’vi, were trained and moulded to serve their purpose. Fifteen years later, you are free, but find yourself a stranger in your birthplace. Reconnect with your lost heritage, discover what it truly means to be Na'vi, and join other clans to protect Pandora from the RDA. ",
+                _createdOn: 1702194620218,
+                _id: "ee9278c4-17f7-4ac1-877b-606bc2e8a9b1"
             }
         },
         reviews: {
-            "0bd5d76e-425c-41ef-b2da-a245283e7598": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                gameId: "63ca85c8-d000-4172-b469-f61d6de55fbcasdwe",
-                title: "asd",
-                review: "asd",
-                _createdOn: 1702054795066,
-                _id: "0bd5d76e-425c-41ef-b2da-a245283e7598"
+            "dbb940e7-0bd9-469e-80b6-087335224ee2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                gameId: "63ca85c8-d000-4172-b469-f61d6de55fbc",
+                title: "My experience",
+                review: "One of the best games to ever come out! I really enjoyed playing it.",
+                _createdOn: 1702194694124,
+                _id: "dbb940e7-0bd9-469e-80b6-087335224ee2"
             },
+            "44e462ff-1098-49d6-986e-dd4fc6c5e587": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                gameId: "b745d90a-226d-4a78-8c03-72fe09b5edfb",
+                title: "Worth",
+                review: "This game is totally worth it ever cent, there is nothing to think about, just buy it!",
+                _createdOn: 1702194768180,
+                _id: "44e462ff-1098-49d6-986e-dd4fc6c5e587"
+            },
+            "a8b07aac-9098-4612-b1e6-5b4ad93a1acb": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                gameId: "f4f1bb3d-1e33-4467-a195-ac782551eeb5",
+                title: "The Absolute Best Game",
+                review: "There is no such game. The online experience is so much fun, as well as the story mode.",
+                _createdOn: 1702194855852,
+                _id: "a8b07aac-9098-4612-b1e6-5b4ad93a1acb"
+            },
+            "c45aa595-7ba4-4d77-9445-ac3b838b44f4": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                gameId: "63ca85c8-d000-4172-b469-f61d6de55fbc",
+                title: "My Honest Review",
+                review: "I support what George said, you shouldn't miss on that game!",
+                _createdOn: 1702195087425,
+                _id: "c45aa595-7ba4-4d77-9445-ac3b838b44f4"
+            },
+            "4339a57a-a699-4187-afb1-888d245d42d5": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                gameId: "f4f1bb3d-1e33-4467-a195-ac782551eeb5",
+                title: "Quality",
+                review: "The quality of the graphics and the gaming experience itself are just irreplaceable!",
+                _createdOn: 1702195098964,
+                _id: "4339a57a-a699-4187-afb1-888d245d42d5"
+            },
+            "a6e49c30-af87-48ca-9cd9-f7e58074ce8c": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                gameId: "f4f1bb3d-1e33-4467-a195-ac782551eeb5",
+                title: "Grand Theft Auto VI",
+                review: "I can't wait for Grand Theft Auto VI to drop! I really hope that the game will be as good as the previous Grand Theft Auto V.",
+                _createdOn: 1702195197613,
+                _id: "a6e49c30-af87-48ca-9cd9-f7e58074ce8c"
+            }
         }
     };
     var rules$1 = {
