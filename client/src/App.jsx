@@ -19,6 +19,7 @@ import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import RouteGuard from "./components/Guards/RouteGuard.jsx";
+import MostAnticipated from "./components/Home/MostAnticipated.jsx";
 
 export default function App() {
     const navigate = useNavigate();
@@ -60,7 +61,7 @@ export default function App() {
     const createGameHandler = async ({ title, imageUrl, genre, developer, players, price, description }) => {
         await gamesService.create(title, imageUrl, genre, developer, players, price, description);
         navigate("/games/catalog");
-    }
+    };
 
     return (
         <>
@@ -75,8 +76,10 @@ export default function App() {
 
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/most-anticipated" element={<MostAnticipated />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/games/catalog" element={<Catalog />} />
+                    <Route path="/games/create" element={<AddGame />} />
                     <Route path="/games/details/:gameId" element={<Details />} />
                     <Route path="/games/edit/:gameId" element={<EditGame />} />
                     <Route path="/login" element={<Login />} />
@@ -85,9 +88,6 @@ export default function App() {
                     <Route path="/404" element={<Error />} />
                     <Route path="*" element={<Navigate to='/404' />} />
 
-                    <Route element={<RouteGuard />}>
-                        <Route path="/games/create" element={<AddGame />} />
-                    </Route>
                 </Routes>
 
                 <Footer />

@@ -1,3 +1,5 @@
+
+
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import * as gamesService from '../../services/gamesService.js';
@@ -16,14 +18,20 @@ export default function Details() {
 
     useEffect(() => {
         gamesService.getOne(gameId)
-            .then(setGame);
+            .then((gameData) => {
+                setGame(gameData);
+            });
 
         reviewsService.getAll(gameId)
-            .then(setReviews)
+            .then(setReviews);
 
     }, [gameId]);
 
     const addReviewHandler = async (values) => {
+        if (values.title === "" || values.review === "") {
+            return;
+        }
+
         const newReview = await reviewsService.create(
             gameId,
             values.title,
@@ -35,17 +43,17 @@ export default function Details() {
         values.review = "";
     }
 
-    const {values, onChange, onSubmit} = useForm(addReviewHandler, {
+    const { values, onChange, onSubmit } = useForm(addReviewHandler, {
         title: "",
         review: ""
     });
 
     const deleteHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${game.title}`);
+        const hasConfirmed = window.confirm(`Are you sure you want to delete ${game.title}`);
 
         if (hasConfirmed) {
             await gamesService.deleteGame(gameId);
-            
+
             navigate("/games/catalog");
         }
     }
@@ -83,7 +91,6 @@ export default function Details() {
                 <div className="details-price-container">
                     <div className="details-price-box">
                         <span className="details-price">${dollars}<span className="details-superscript">,{cents}</span></span>
-                        <button>Buy</button>
                     </div>
                     <div className="details-links">
                         <a href="#add-review-title"><img src="../../images/review-bubble.png" alt="" /> Add review</a>
@@ -91,7 +98,7 @@ export default function Details() {
 
                     {_id === game._ownerId && (
                         <div className="buttons">
-                            <Link to={`/games/edit/${gameId}`} className="edit">Edit</Link>
+                            <Link to={`/games/edit/${gameId}`}><button className="edit">Edit</button></Link>
                             <button className="delete" onClick={deleteHandler}>Delete</button>
                         </div>
                     )}
