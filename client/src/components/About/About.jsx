@@ -8,7 +8,9 @@ export default function About() {
                 <div className="about-container">
                     <div className='about-us-info'>
                         <div className="about-top-left">
-
+                            <span className='about-heading-top'>Infinite Pixels</span>
+                            <span className='about-sub-heading-top'>"Join the Infinite Pixels Community"</span>
+                            <p>Whether you're a seasoned gamer or just starting your digital journey, we extend our heartfelt gratitude for choosing Infinite Pixels as your gaming destination. We are committed to providing you with an exceptional gaming experience, and we look forward to being a part of your gaming adventures. Join our vibrant community, where you can connect with like-minded players, share tips, and stay updated on the latest gaming trends. At Infinite Pixels, the journey is as limitless as your imagination – welcome to a world of infinite possibilities in gaming!</p>
                         </div>
                         <div className="about-bottom-right">
                             <span className='about-heading'>History</span>
