@@ -5,12 +5,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import * as gamesService from '../../services/gamesService.js';
 import * as reviewsService from '../../services/reviewsService.js';
 import Review from './Review/Review.jsx';
-import AuthContext from '../../contexts/AuthContext.js';
+import AuthContext from '../../contexts/AuthContext.jsx';
 import useForm from '../../hooks/useForm.js';
 
 export default function Details() {
     const navigate = useNavigate();
-    const { username, _id } = useContext(AuthContext);
+    const { accessToken, username, _id } = useContext(AuthContext);
+    const isAuthenticated = !!accessToken;
     const [game, setGame] = useState({ price: "" });
     const [reviews, setReviews] = useState([]);
     const { gameId } = useParams();
@@ -122,32 +123,34 @@ export default function Details() {
                     )
                 }
 
-                <div className="add-review">
-                    <span className='add-review-title' id='add-review-title'>Add your review</span>
+                {isAuthenticated && (
+                    <div className="add-review">
+                        <span className='add-review-title' id='add-review-title'>Add your review</span>
 
-                    <form onSubmit={onSubmit}>
-                        <label htmlFor="title">Title:</label>
-                        <input
-                            type="text"
-                            id="title"
-                            name="title"
-                            placeholder="Enter review title"
-                            value={values.title}
-                            onChange={onChange}
-                        />
+                        <form onSubmit={onSubmit}>
+                            <label htmlFor="title">Title:</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="Enter review title"
+                                value={values.title}
+                                onChange={onChange}
+                            />
 
-                        <label htmlFor="review">Review:</label>
-                        <input
-                            type="text"
-                            id="review"
-                            name="review"
-                            placeholder="Enter your review"
-                            value={values.review}
-                            onChange={onChange}
-                        />
-                        <button type="submit">Add Review</button>
-                    </form>
-                </div>
+                            <label htmlFor="review">Review:</label>
+                            <input
+                                type="text"
+                                id="review"
+                                name="review"
+                                placeholder="Enter your review"
+                                value={values.review}
+                                onChange={onChange}
+                            />
+                            <button type="submit">Add Review</button>
+                        </form>
+                    </div>
+                )}
             </div>
         </div>
     );

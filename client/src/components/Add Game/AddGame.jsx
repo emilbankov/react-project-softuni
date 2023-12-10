@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import './AddGame.module.css'
-import AuthContext from '../../contexts/AuthContext.js';
+import AuthContext from '../../contexts/AuthContext.jsx';
 import useForm from '../../hooks/useForm.js';
 
 export default function AddGame() {

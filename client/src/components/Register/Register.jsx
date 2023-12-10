@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import './Register.module.css'
 import { Link } from "react-router-dom";
-import AuthContext from "../../contexts/AuthContext.js";
+import AuthContext from "../../contexts/AuthContext.jsx";
 import useForm from "../../hooks/useForm.js";
 
 export default function Register() {

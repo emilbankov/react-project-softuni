@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Navigate, Outlet } from "react-router-dom";
-import AuthContext from "../../contexts/AuthContext.js";
+import AuthContext from "../../contexts/AuthContext.jsx";
 
 export default function RouteGuard(props) {
     const { isAuthenticated } = useContext(AuthContext);

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from "./HomeHeader.module.css"
 import { useContext, useEffect } from "react"
-import AuthContext from "../../contexts/AuthContext.js";
+import AuthContext from "../../contexts/AuthContext.jsx";
 
 export default function HomeHeader() {
     const { accessToken } = useContext(AuthContext);

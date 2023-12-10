@@ -1,9 +1,6 @@
-import { useContext, useState } from "react"
-import { Routes, Route, useLocation, Navigate, useNavigate, useParams } from "react-router-dom"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 
-import { login, register } from "./services/authService.js";
-import * as gamesService from "./services/gamesService.js";
-import AuthContext from "./contexts/AuthContext.js"
+import { AuthProvider } from "./contexts/AuthContext.jsx"
 
 import DefaultHeader from "./components/Default Header/DefaultHeader.jsx"
 import HomeHeader from "./components/Home Header/HomeHeader.jsx"
@@ -18,54 +15,14 @@ import Logout from "./components/Logout/Logout.jsx"
 import Register from "./components/Register/Register.jsx"
 import Error from "./components/Error/Error.jsx"
 import Footer from "./components/Footer/Footer.jsx"
-import RouteGuard from "./components/Guards/RouteGuard.jsx";
 import MostAnticipated from "./components/Home/MostAnticipated.jsx";
 
 export default function App() {
-    const navigate = useNavigate();
     const isHomePage = useLocation().pathname === '/';
-    const [errorFromServer, setErrorFromServer] = useState({});
-    const [auth, setAuth] = useState(() => {
-        localStorage.removeItem("accessToken");
-
-        return {};
-    });
-
-    const loginHandler = async ({ email, password }) => {
-        const result = await login(email, password);
-
-        setAuth(result);
-        localStorage.setItem("accessToken", result.accessToken);
-        navigate("/")
-    };
-
-    const registerHandler = async ({ username, email, password }) => {
-        try {
-            const result = await register(username, email, password);
-            setAuth(result);
-            localStorage.setItem("accessToken", result.accessToken);
-            navigate("/");
-            setErrorFromServer({});
-        } catch (err) {
-            setErrorFromServer(err)
-        }
-    };
-
-    const logoutHandler = () => {
-        setAuth({});
-        localStorage.clear();
-
-        navigate("/");
-    };
-
-    const createGameHandler = async ({ title, imageUrl, genre, developer, players, price, description }) => {
-        await gamesService.create(title, imageUrl, genre, developer, players, price, description);
-        navigate("/games/catalog");
-    };
 
     return (
         <>
-            <AuthContext.Provider value={{ loginHandler, registerHandler, logoutHandler, createGameHandler, errorFromServer, ...auth }}>
+            <AuthProvider>
                 {isHomePage ?
                     (
                         <HomeHeader />
@@ -87,11 +44,10 @@ export default function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/404" element={<Error />} />
                     <Route path="*" element={<Navigate to='/404' />} />
-
                 </Routes>
 
                 <Footer />
-            </AuthContext.Provider>
+            </AuthProvider>
         </>
 
     )

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from "./DefaultHeader.module.css"
 import { useContext } from "react"
-import AuthContext from "../../contexts/AuthContext.js"
+import AuthContext from "../../contexts/AuthContext.jsx"
 
 export default function DefaultHeader() {
     const { accessToken } = useContext(AuthContext);
