@@ -93,9 +93,11 @@ export default function Details() {
                     <div className="details-price-box">
                         <span className="details-price">${dollars}<span className="details-superscript">,{cents}</span></span>
                     </div>
-                    <div className="details-links">
-                        <a href="#add-review-title"><img src="../../images/review-bubble.png" alt="" /> Add review</a>
-                    </div>
+                    {isAuthenticated && (
+                        <div className="details-links">
+                            <a href="#add-review-title"><img src="../../images/review-bubble.png" alt="" /> Add review</a>
+                        </div>
+                    )}
 
                     {_id === game._ownerId && (
                         <div className="buttons">
