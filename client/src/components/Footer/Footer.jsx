@@ -36,26 +36,18 @@ export default function Footer() {
 
                 </div>
                 <div className="col-md-5 footer-middle-w3">
-                    <h4 className={styles["middle-footer"]}>Latest Games</h4>
+                    <h4 className={styles["middle-footer"]}>All Time Most Popular Games</h4>
                     <div className="col-md-3 img-w3-agile">
-                        <a href="single.html">
-                            <img src="/images/ng1.jpg" alt=" " />
-                        </a>
+                            <img src="/images/minecraft.png" alt=" " />
                     </div>
                     <div className="col-md-3 img-w3-agile">
-                        <a href="single.html">
-                            <img src="/images/ng2.jpg" alt=" " />
-                        </a>
+                            <img src="/images/tetris.png" alt=" " />
                     </div>
                     <div className="col-md-3 img-w3-agile">
-                        <a href="single.html">
-                            <img src="/images/ng3.jpg" alt=" " />
-                        </a>
+                            <img src="/images/gtav.png" alt=" " />
                     </div>
                     <div className="col-md-3 img-w3-agile">
-                        <a href="single.html">
-                            <img src="/images/ng4.jpg" alt=" " />
-                        </a>
+                            <img src="/images/lol.jpg" alt=" " />
                     </div>
                     <div className="clearfix" />
                 </div>
