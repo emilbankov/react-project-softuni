@@ -7,7 +7,7 @@ export default function useForm(submitHandler, initialValues, validate) {
     const onChange = (e) => {
         setValues((state) => ({
             ...state,
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value
         }));
     };
 
@@ -18,7 +18,6 @@ export default function useForm(submitHandler, initialValues, validate) {
             const newErrors = validate(values);
             setErrors(newErrors);
 
-            // If there are errors, stop the submission
             if (Object.keys(newErrors).length > 0) {
                 return;
             }

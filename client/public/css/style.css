@@ -1024,17 +1024,17 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 .collection-grid.collection-image.collection-grid-2 {
-	background: url(../images/Minecraft.png) no-repeat 0px 0px;
+	background: url(../images/minecraft.png) no-repeat 0px 0px;
 	background-size: 100% 100%;
 }
 
 .collection-grid.collection-image.collection-grid-4 {
-	background: url(../images/Super\ Mario.jpg) no-repeat 0px 0px;
+	background: url(../images/supermario.jpg) no-repeat 0px 0px;
 	background-size: 101% 100%;
 }
 
 .collection-grid.collection-image.collection-grid-6 {
-	background: url(../images/Pac\ Man.jpg) no-repeat 0px 0px;
+	background: url(../images/pacman.jpg) no-repeat 0px 0px;
 	background-size: 100% 100%;
 }
 
@@ -3556,7 +3556,7 @@ body::-webkit-scrollbar {
 
 .add-game-page,
 .edit-game-page {
-	height: 800px;
+	height: 850px;
 }
 
 .login-form label,
@@ -3673,6 +3673,16 @@ textarea#description {
 	width: 130px;
 }
 
+.about-heading-top {
+	display: block;
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	width: 240px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 .about-sub-heading {
 	display: block;
 	margin-left: 344px;
@@ -3681,7 +3691,24 @@ textarea#description {
 	width: 261px;
 }
 
+.about-sub-heading-top {
+	display: block;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	width: 450px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
 .about-bottom-right p {
+	margin: 0 20px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.about-top-left p {
+	color: white;
 	margin: 0 20px;
 	margin-top: 40px;
 	margin-bottom: 10px;
@@ -3834,6 +3861,7 @@ textarea#description {
 .details-image {
 	flex: 1;
 	max-width: 400px;
+	max-height: 500px;
 	margin-right: 35px;
 }
 
@@ -3897,6 +3925,7 @@ textarea#description {
 
 .details-price {
 	font-size: 26px;
+	font-weight: bold;
 }
 
 .details-superscript {
@@ -3904,17 +3933,6 @@ textarea#description {
 	position: relative;
 	z-index: 9;
 	top: -0.4em;
-}
-
-.details-price-box button {
-	margin-top: 10px;
-	background-color: black;
-	color: white;
-	border: transparent;
-	border-radius: 10px;
-	font-size: 18px;
-	width: 160px;
-	height: 36px;
 }
 
 .details-links {
@@ -3931,6 +3949,33 @@ textarea#description {
 .details-links img {
 	width: 26px;
 	height: 26px;
+}
+
+div .buttons {
+	margin-top: 170px;
+}
+
+.edit {
+	background-color: #3498DB;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	margin-right: 0;
+}
+
+.delete {
+	background-color: #E74C3C;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	margin-left: 10px;
+	margin-right: 0;
 }
 
 .reviews-section {
@@ -4104,18 +4149,37 @@ textarea#description {
 }
 
 .error-msg {
-    margin-top: 5px; /* Adjust the margin to your preference */
-    font-size: 12px; /* Adjust the font size to your preference */
-    color: black; /* Set the color to red or any color you prefer */
-    text-align: center; /* Align the error message to the center */
-    width: max-content;
-    padding: 8px;
-    background-color: white;
-    border: 2px solid red;
-    border-radius: 20px;
-    white-space: nowrap;
-    z-index: 1;
-    display: flex; /* Align the text within the bubble */
-    align-items: center; /* Center the text vertically */
+	margin-top: 5px;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+	width: max-content;
+	padding: 8px;
+	background-color: white;
+	border: 2px solid red;
+	border-radius: 20px;
+	white-space: nowrap;
+	z-index: 1;
+	display: flex;
+	align-items: center;
 }
 
+.most-anticipated {
+	width: 1240px;
+	height: 715px;
+	margin-bottom: 0;
+	margin: 0 auto;
+}
+
+.most-anticipated-game {
+	height: 585px;
+}
+
+.most-anticipated-trend {
+	padding-top: 50px;
+	padding-bottom: 0;
+}
+
+.tabbed-text::before {
+	content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+}
