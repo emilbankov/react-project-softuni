@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import './EditGame.module.css'
 import { useNavigate, useParams } from 'react-router-dom';
 import * as gameService from '../../services/gamesService.js'
+import validate from './validate.js';
 export default function EditGame() {
     const navigate = useNavigate();
     const { gameId } = useParams();
+    const [errors, setErrors] = useState({});
     const [game, setGame] = useState({
         title: "",
         imageUrl: "",
@@ -26,14 +28,16 @@ export default function EditGame() {
         e.preventDefault();
 
         const values = Object.fromEntries(new FormData(e.currentTarget));
+        const formErrors = validate(values);
 
-        try {
-            await gameService.edit(gameId, values);
-
-            navigate(`/games/details/${gameId}`);
-        } catch (err) {
-            console.log(err);
+        if (Object.keys(formErrors).length > 0) {
+            const firstErrorField = Object.keys(formErrors)[0];
+            setErrors(firstErrorField ? { [firstErrorField]: formErrors[firstErrorField] } : {});
+            return;
         }
+
+        await gameService.edit(gameId, values);
+        navigate(`/games/details/${gameId}`);
     }
 
     const onChange = (e) => {
@@ -57,6 +61,7 @@ export default function EditGame() {
                         value={game.title}
                         onChange={onChange}
                     />
+                    {errors.title && <div className="error-msg"><span>{errors.title}</span></div>}
 
                     <label htmlFor="imageUrl">Image URL:</label>
                     <input
@@ -67,6 +72,7 @@ export default function EditGame() {
                         value={game.imageUrl}
                         onChange={onChange}
                     />
+                    {errors.imageUrl && <div className="error-msg"><span>{errors.imageUrl}</span></div>}
 
                     <label htmlFor="genre">Genre:</label>
                     <input
@@ -77,6 +83,7 @@ export default function EditGame() {
                         value={game.genre}
                         onChange={onChange}
                     />
+                    {errors.genre && <div className="error-msg"><span>{errors.genre}</span></div>}
 
                     <label htmlFor="developer">Developer:</label>
                     <input
@@ -87,6 +94,7 @@ export default function EditGame() {
                         value={game.developer}
                         onChange={onChange}
                     />
+                    {errors.developer && <div className="error-msg"><span>{errors.developer}</span></div>}
 
                     <label htmlFor="players">Players:</label>
                     <input
@@ -97,6 +105,7 @@ export default function EditGame() {
                         value={game.players}
                         onChange={onChange}
                     />
+                    {errors.players && <div className="error-msg"><span>{errors.players}</span></div>}
 
                     <label htmlFor="price">Price:</label>
                     <input
@@ -107,6 +116,7 @@ export default function EditGame() {
                         value={game.price}
                         onChange={onChange}
                     />
+                    {errors.price && <div className="error-msg"><span>{errors.price}</span></div>}
 
                     <label htmlFor="description">Description:</label>
                     <textarea
@@ -116,6 +126,7 @@ export default function EditGame() {
                         value={game.description}
                         onChange={onChange}
                     ></textarea>
+                    {errors.description && <div className="error-msg"><span>{errors.description}</span></div>}
 
                     <button type="submit">Edit Game</button>
                 </form>

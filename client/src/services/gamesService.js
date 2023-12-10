@@ -6,9 +6,7 @@ export const getAll = async () => await get(baseUrl);
 export const getOne = async (gameId) => await get(`${baseUrl}/${gameId}`);
 
 export const getLatest = async () => {
-    const query = encodeURIComponent(`offset=0&pageSize=3`);
-    console.log(query);
-    const result = await get(`${baseUrl}?sortBy=_createdOn%20desc&${query}`);
+    const result = await get(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=4`);
 
     return result;
 }
